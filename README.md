@@ -8,3 +8,4 @@ Ejemplos y ejercicios para la generaciopn g12 de FrontEnd
 4. Ejemplo 4: implementando if - else.
 5. Ejemplo 5: implementando switch.
 6. Ejemplo 6: utilizando ciclos.
+7. Ejemplo 7: aplicando funciones de manera basica.
