@@ -59,3 +59,12 @@ for (let x = 1; x < 5; x++) {
         console.log(x, y);
     }
 }
+
+let i = 0;
+while(i < 20){
+    i++;
+}
+console.log(i);
+
+for (var w = 0; w < 20; w++) {}
+console.log(w);
