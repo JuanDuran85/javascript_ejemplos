@@ -34,3 +34,28 @@ do {
     document.write(`<h6>Numero del usuario: ${numero}. Cuenta con do-while: ${valor}</h6>`);
     valor++
 } while (valor <= numero);
+
+
+/* utilizando el break y continue en los ciclos */
+
+for (let z = 0; z < 10; z++) {
+    if(z%2 == 0 || z === 9) {
+        continue;
+    }
+    console.log(z);
+}
+
+for (let z = 0; z < 50; z++) {
+    if(z === 7) {
+        break;
+    }
+    console.log(z);
+}
+
+
+/* ciclos anidados */
+for (let x = 1; x < 5; x++) {
+    for(let y=1; y < 5; y++) {
+        console.log(x, y);
+    }
+}
