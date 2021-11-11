@@ -11,3 +11,7 @@ Ejemplos y ejercicios para la generaciopn g12 de FrontEnd
 7. Ejemplo 7: aplicando funciones de manera basica.
 8. Ejemplo 8: aplicando funciones - Parte 2.
 9. Ejemplo 9: Usando funciones ciclos y varibales con let, var y const.
+10. Ejemplo 10: Trabajando con selectores para el DOM.
+11. Ejemplo 11: Trabajando con selectores para el DOM parte 2.
+12. Ejemplo 11: Trabajando con eventos en el DOM parte 1.
+13. Ejemplo 13: Trabajando con eventos en el DOM parte 2.
