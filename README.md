@@ -17,3 +17,5 @@ Ejemplos y ejercicios para la generaciopn g12 de FrontEnd
 13. Ejemplo 13: Trabajando con eventos en el DOM parte 2.
 14. Ejemplo 14: Trabajando con arreglos parte 1.
 15. Ejemplo 15: Recorriendo arreglos con ciclos parte 1.
+16. Ejemplo 16: Recorriendo arreglos con ciclos parte 2.
+17. Ejemplo 17: trabajando con metodos para arreglos.
