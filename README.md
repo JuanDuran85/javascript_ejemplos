@@ -20,3 +20,4 @@ Ejemplos y ejercicios para la generaciopn g12 de FrontEnd
 16. Ejemplo 16: Recorriendo arreglos con ciclos parte 2.
 17. Ejemplo 17: trabajando con metodos para arreglos.
 18. Ejemplo 18: Usando jQuery.
+19. Ejemplo 19: Usando jQuery y APIs.
