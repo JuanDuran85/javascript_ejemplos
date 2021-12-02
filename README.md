@@ -22,3 +22,4 @@ Ejemplos y ejercicios para la generaciopn g12 de FrontEnd
 18. Ejemplo 18: Usando jQuery.
 19. Ejemplo 19: Usando jQuery y APIs.
 20. Ejemplo 20: Trabajando con  POO. Parte 1.
+21. Ejemplo 21: Ejemplos con ES6.

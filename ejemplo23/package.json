@@ -1,0 +1,19 @@
+{
+  "name": "ejemplo23",
+  "version": "1.0.0",
+  "description": "Usando Clases con ES6 y Babel",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ES6"
+  ],
+  "author": "JuanDuran855",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.4"
+  }
+}
