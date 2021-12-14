@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Ejemplo</title>
+</head>
+<body>
+
+    <main class="container mt-5">
+        <section class="row">
+            <div class="col">
+                <h3>Formulario de Registro</h3>
+                <form>
+                    <div class="mb-3">
+                      <label for="animal" class="form-label">Nombre del Animal</label>
+                      <input type="text" class="form-control" id="animal">
+                    </div>
+                    <div class="mb-3">
+                      <label for="herbivoro" class="form-label">Tipo de comida</label>
+                      <input type="text" class="form-control" id="herbivoro">
+                    </div>
+                    <div class="mb-3">
+                        <label for="fitofago" class="form-label">Distancia</label>
+                        <input type="number" class="form-control" id="fitofago">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Registrar</button>
+                </form>
+            </div>
+            <div class="col" id="muestra">
+            </div>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
