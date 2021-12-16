@@ -25,5 +25,9 @@ Ejemplos y ejercicios para la generaciopn g12 de FrontEnd
 21. Ejemplo 21: Ejemplos de POO con ES6.
 22. Ejemplo 22: Utilizando babel - parte 1.
 23. Ejemplo 23: utilizando Babel - parte 2.
-24. Ejemplo 24: Implementado Herencia para POO ES6.
-25. Ejemplo 24: Implementado Herencia para POO ES5.
+24. Ejemplo 24: Implementado Herencia para POO ES6 - Parte 1.
+25. Ejemplo 25: Implementado Herencia para POO ES5.
+26. Ejemplo 26: Implementado Herencia para POO ES6 - Parte 2.
+27. Ejemplo 27: Implementado Herencia para POO ES6 - Parte 3. 
+28. Ejemplo 28: Implementado Herencia y Polimorfismo para POO ES6 - Parte 1.
+29. Ejemplo 28: Implementado Herencia y Polimorfismo para POO ES6 - Parte 2.
