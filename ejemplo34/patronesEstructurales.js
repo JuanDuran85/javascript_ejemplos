@@ -177,5 +177,3 @@ class ApiAdpter {
 const adapterApi = new ApiAdpter();
 adapterApi.operations(recursos, {}, "get");
 adapterApi.operations(recursos, dataToPost, "post");
-
-
