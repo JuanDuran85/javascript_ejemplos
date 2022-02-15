@@ -35,7 +35,7 @@ const users = [
 ];
 
 // funcion para rastreo de pasos
-const trace = x => y => console.log(x, y);
+const trace = (x) => (y) => console.log(x, y);
 
 const pipe =
   (...functions) =>
@@ -43,20 +43,20 @@ const pipe =
     functions.reduce((value, funct) => funct(value), data);
 
 // funcion para filtrar datos sin importar la condicion
-const filterData = predicate => data => data.filter(predicate);
+const filterData = (predicate) => (data) => data.filter(predicate);
 
 // funcion para obtener el primer elemento de un array
-const firstElementInArray = data => data[0];
+const firstElementInArray = (data) => data[0];
 
 // funcion para formatear
-const formatChildren = data => ({
+const formatChildren = (data) => ({
   fullName: `${data.name} ${data.lastname}`,
   age: data.age,
 });
 
-const childNameLastName = data => `${data.fullName} is ${data.age} years old`;
+const childNameLastName = (data) => `${data.fullName} is ${data.age} years old`;
 
-const getChildren = data =>
+const getChildren = (data) =>
   childNameLastName(
     formatChildren(firstElementInArray(data.filter((user) => user.age < 12)))
   );
@@ -65,8 +65,50 @@ const getChildrenTwo = pipe(
   filterData((user) => user.age < 12),
   firstElementInArray,
   formatChildren,
-  childNameLastName,
+  childNameLastName
 );
 
 console.info(getChildren(users));
 console.info(getChildrenTwo(users));
+
+/* Composicion sobre herencia */
+
+const dormirFunction = () => console.log(`ZZZzzzz...`);
+const saludarFunction = (name) => console.log(`Hola! ${name}`);
+const despedirFunction = (name) => console.log(`Adios! ${name}`);
+
+class Persona {
+  constructor(name) {
+    this.name = name;
+  }
+
+  saludar() {
+    saludarFunction(this.name);
+  }
+  despedir() {
+    despedirFunction(this.name);
+  }
+  dormir() {
+    dormirFunction();
+  }
+}
+
+class Robot {
+  constructor(name) {
+    this.name = name;
+  }
+
+  saludar() {
+    saludarFunction(this.name);
+  }
+  despedir() {
+    despedirFunction(this.name);
+  }
+}
+
+const persona = new Persona("Juan");
+const robot = new Robot("R2D2");
+console.log(persona);
+console.log(robot);
+persona.despedir();
+robot.despedir();
