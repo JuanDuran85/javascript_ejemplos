@@ -30,3 +30,31 @@ function reverseStringTwo(inputString) {
 
 console.log(reverseStringTwo("Ejemplo de string"));
 //-----------------------------------------------------------------------------------------
+
+console.log('-----------------------------------------------------------------------------------------');
+
+// ----------------------------------------------------------------------------------------
+// Capitalize first letter of a string in a function
+// ----------------------------------------------------------------------------------------
+
+function capitalizeFirstLetter(inputString) {
+    return inputString.charAt(0).toUpperCase() + inputString.slice(1); 
+}
+
+console.log(capitalizeFirstLetter("ejemplo de string a capitalizar en la primera letra"));
+//-----------------------------------------------------------------------------------------
+
+console.log('-----------------------------------------------------------------------------------------');
+
+// ----------------------------------------------------------------------------------------
+// Using spread operator in the argument of a function
+// ----------------------------------------------------------------------------------------
+
+function eatFood(...fruits) {
+    const [first, second] = fruits;
+    console.log(`First fruit: ${first}`);
+    console.log(`Second fruit: ${second}`);
+}
+
+eatFood("Apple", "Orange");
+//-----------------------------------------------------------------------------------------

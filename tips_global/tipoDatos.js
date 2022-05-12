@@ -18,8 +18,11 @@ console.log(27.99992 | 0); // 27
 console.log('-----------------------------------------------------------------------------------------');
 
 // ----------------------------------------------------------------------------------------
-// 
+// Convertir un numero a hexadecimal o binario / Convert Number to Hex or Binary
 // ----------------------------------------------------------------------------------------
-
+const numberToConvert = 36;
+console.log({numberToConvert})
+console.log(numberToConvert.toString(2)); // 1100011
+console.log(numberToConvert.toString(16)); // 43
 
 // ----------------------------------------------------------------------------------------
