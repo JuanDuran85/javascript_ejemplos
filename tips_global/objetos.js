@@ -89,8 +89,8 @@ function invitarEmpleados(saludo1, saludo2){
     console.log(`${saludo1} ${this.nombre} ${this.apellido} ${saludo2}`);
 }
 
-invitarEmpleados.call(empleadoUno, 'Hola','Saludos...')
-invitarEmpleados.call(empleadoDos, 'Hola','Saludos')
+invitarEmpleados.call(empleadoUno, 'Hola','Saludos...');
+invitarEmpleados.call(empleadoDos, 'Hola','Saludos');
 
 //-----------------------------------------------------------------------------------------
 
@@ -100,9 +100,71 @@ console.log('-------------------------------------------------------------------
 // El metodo apply() invoca una determinada funcion asignado explicitamente el objeto this y un arreglo como parametros (argumentos) oara dicho funcion.
 // ----------------------------------------------------------------------------------------
 
+invitarEmpleados.apply(empleadoUno, ['Hola','Saludos...']);
+invitarEmpleados.apply(empleadoDos, ['Hola','Saludos']);
+
+//-----------------------------------------------------------------------------------------
+
+console.log('-----------------------------------------------------------------------------------------');
+
+// ----------------------------------------------------------------------------------------
+// El metodo bind() crea una nueva funcion, que cuando es llamada, asigna a su operador this el valor entregado, con una secuencia de argumentos dados prediciendo a cualquiera entregados cuando la funcion es llamada. El valor de this es ignorado cuando la funcion es llamada con el operador new. Bind crea una funcion que tendra this establecido en el primer parametro pasado a bind()
+// ----------------------------------------------------------------------------------------
+
+const invitarEmpleadoUno = invitarEmpleados.bind(empleadoUno);
+const invitarEmpleadoDos = invitarEmpleados.bind(empleadoDos);
+
+invitarEmpleadoUno('Hola','Saludos...')
+invitarEmpleadoDos('Hola','Saludos')
+
+//-----------------------------------------------------------------------------------------
+
+console.log('-----------------------------------------------------------------------------------------');
+
+// ----------------------------------------------------------------------------------------
+// Dos maneras de eliminar propiedades de un objeto
+// ----------------------------------------------------------------------------------------
+
+const objetoDos = {
+    x: 45,
+    y: 72,
+    z: 68,
+    p: 34
+};
+
+const objetoTres = {
+    x: 45,
+    y: 72,
+    z: 68,
+    p: 34
+};
+
+// Opcion 1 - Larga - :
+delete objetoDos.x;
+delete objetoDos.y;
+console.log(objetoDos);
+
+// Opcion 2 - Corta - :
+const {x, y, ...newObj } = objetoTres;
+console.log(newObj)
 
 
-invitarEmpleados.call(empleadoUno, 'Hola','Saludos...')
-invitarEmpleados.call(empleadoDos, 'Hola','Saludos')
+//-----------------------------------------------------------------------------------------
+
+console.log('-----------------------------------------------------------------------------------------');
+
+// ----------------------------------------------------------------------------------------
+// Dos maneras de eliminar propiedades de un objeto
+// ----------------------------------------------------------------------------------------
+
+const school = {
+    nombre: 'Juan',
+    edad: 36,
+    asignacion: 'Developer'
+};
+
+const { nombre, edad } = school;
+console.log(nombre, edad);
+
 
 //-----------------------------------------------------------------------------------------

@@ -41,9 +41,46 @@ console.log(obtenerElementosUnicos(arregloDos)); // retorna un array con los ele
 console.log('-----------------------------------------------------------------------------------------');
 
 // ----------------------------------------------------------------------------------------
-// 
+// Cuatro formas distintas de convertir un string a un arreglo
+// ----------------------------------------------------------------------------------------
+const stringUno = "JavaScript";
+// Opcion 1:
+console.log(`String original: ${stringUno}`)
+console.log(stringUno.split(','));
+
+// Opcion 2:
+console.log([...stringUno]);
+
+// Opcion 3:
+console.log(Array.from(stringUno));
+
+// Opcion 4:
+console.log();
+
+//-----------------------------------------------------------------------------------------
+
+console.log('-----------------------------------------------------------------------------------------');
+
+// ----------------------------------------------------------------------------------------
+// El metodo includes permite saber si un elemento existe en un arreglo, en convinacion con un condicional if, podemos hacer una comparacion de un elemento en un arreglo y ahorrar condiciones repetidas.
 // ----------------------------------------------------------------------------------------
 
+const arregloStringElementos = ['Casa', 1, "Compra", "cosas"]
+if (arregloStringElementos.includes('Casa')) {
+  console.log('El elemento existe');
+}
 
+
+//-----------------------------------------------------------------------------------------
+
+console.log('-----------------------------------------------------------------------------------------');
+
+// ----------------------------------------------------------------------------------------
+// Se puede utilizar el metodo filter para filtrar elementos de un arreglo, pero al pasarle como argumento la palabra Boolean, retornara solamente los elementos del arreglo que sean true o validos.
+// ----------------------------------------------------------------------------------------
+
+const arregloSinValidar = [12, null, 0, 34, "JS", false];
+const arregloFiltradoValido = arregloSinValidar.filter(Boolean);
+console.log(arregloFiltradoValido);
 
 //-----------------------------------------------------------------------------------------
