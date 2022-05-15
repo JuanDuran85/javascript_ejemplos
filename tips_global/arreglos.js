@@ -84,3 +84,35 @@ const arregloFiltradoValido = arregloSinValidar.filter(Boolean);
 console.log(arregloFiltradoValido);
 
 //-----------------------------------------------------------------------------------------
+
+console.log('-----------------------------------------------------------------------------------------');
+
+// ----------------------------------------------------------------------------------------
+// Para obtener el valor maximo y minimo de un arreglo se puede utilizar el metodo Math.max y Math.min.
+// ----------------------------------------------------------------------------------------
+
+const arregloNumeros = [3,6,8,2,6,1,9];
+
+console.log(Math.max(...arregloNumeros)); // 9
+console.log(Math.min(...arregloNumeros)); // 1
+
+
+// ----------------------------------------------------------------------------------------
+
+console.log('-----------------------------------------------------------------------------------------');
+
+// ----------------------------------------------------------------------------------------
+// Se pueden unir o concatenar dos arreglos de dos posibles maneras, una es mediante el metodo concat, y la otra es mediante el metodo spread.
+// ----------------------------------------------------------------------------------------
+
+const arregloNumerosUno = [3,6,8];
+console.log(arregloNumerosUno);
+// Opcion 1: concat
+const arregloConcatenadoUno = arregloNumerosUno.concat([6,2]);
+console.log(arregloConcatenadoUno); 
+
+// Opcion 2: operador spread
+const arregloConcatenadoDos = [...arregloNumerosUno, 6,2];
+console.log(arregloConcatenadoDos);
+
+// ----------------------------------------------------------------------------------------

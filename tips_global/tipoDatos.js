@@ -53,3 +53,85 @@ let [ a, b, c] = [1,2,3]
 console.log(a,b,c); // 1 2 3
 
 // ----------------------------------------------------------------------------------------
+
+console.log('-----------------------------------------------------------------------------------------');
+
+// ----------------------------------------------------------------------------------------
+// Se puede convertir un dato tipo number a tipo string, utilizando la clase String
+// ----------------------------------------------------------------------------------------
+console.log(`Type of ${100}: ${typeof 100}`); // Type of 100: number
+console.log(`Type of ${String(100)}: ${typeof String(100)}`); // Type of 100: string
+
+// ----------------------------------------------------------------------------------------
+
+console.log('-----------------------------------------------------------------------------------------');
+
+// ----------------------------------------------------------------------------------------
+// Se puede verificar si existe algun tipo de dato en una variable mediante la clase Boolean o con el operador !!. Ojo: Retorna true cuando es un arreglo u objeto vacio.
+// ----------------------------------------------------------------------------------------
+
+const inputOne = 100;
+
+// Opcion 1 de verificacion:
+const outputOne = Boolean(inputOne);
+console.log(outputOne); // true
+
+// Opcion 2 de varificacion:
+const outputTwo = !!inputOne;
+console.log(outputTwo); // true
+
+
+// ----------------------------------------------------------------------------------------
+
+console.log('-----------------------------------------------------------------------------------------');
+
+// ----------------------------------------------------------------------------------------
+// Se puede invertir o pasar un valor de una variable a otra utilizado arreglos
+// ----------------------------------------------------------------------------------------
+let variableUno = "JavaScript";
+let variableDos = "Python";
+
+console.log({variableUno});
+console.log({variableDos});
+
+[variableUno, variableDos] = [variableDos, variableUno];
+
+console.log({variableUno});
+console.log({variableDos});
+
+// ----------------------------------------------------------------------------------------
+
+console.log('-----------------------------------------------------------------------------------------');
+
+// ----------------------------------------------------------------------------------------
+// Existen dos maneras de elevar un nuevo a un valor x. La primera puede ser utilizando la libreria Math con el metodo pow, la segunda puede ser la utilizacion del operador **.
+// ----------------------------------------------------------------------------------------
+
+//opcion 1: Math.pow
+console.log(Math.pow(2, 3)); // 8
+
+//opcion 2: **
+console.log(2 ** 3); // 8
+
+
+// ----------------------------------------------------------------------------------------
+
+console.log('-----------------------------------------------------------------------------------------');
+
+// ----------------------------------------------------------------------------------------
+// Existen dos maneras de repetir un string n cantidad de veces, la primera es las larga y se debe utilizar un ciclo for. la segunda es usando el metodo reapeat de los string.
+// ----------------------------------------------------------------------------------------
+
+//opcion 1: Ya no se debe usar
+let stringUno = "";
+for (let i = 0; i<5; i++){
+    stringUno += "Texto X ";
+}
+console.log(stringUno); // Texto X Texto X Texto X Texto X
+
+//opcion 2: la ideal usando repeat
+const stringDos = "Texto Y ".repeat(5);
+console.log(stringDos); // Texto Y Texto Y Texto Y Texto Y
+
+
+// ----------------------------------------------------------------------------------------
