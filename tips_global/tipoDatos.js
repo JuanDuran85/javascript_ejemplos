@@ -135,3 +135,122 @@ console.log(stringDos); // Texto Y Texto Y Texto Y Texto Y
 
 
 // ----------------------------------------------------------------------------------------
+
+console.log('-----------------------------------------------------------------------------------------');
+
+// ----------------------------------------------------------------------------------------
+// Existen distintas maneras de comprobar si las propiedades de un objeto poseen valores, una de ellas es ir comprobando si existe la propiedad, y si existe, comprobar si tiene valor. La otra es usando el operador ?. 
+// ----------------------------------------------------------------------------------------
+
+const area = {
+    dimension:{
+        width: 10
+    },
+}
+
+const product = {
+    type: {
+        name: "Computer",
+    }
+}
+
+//opcion 1: Ya no se debe usar
+const width = area && area.dimension && area.dimension.width;
+console.log(width); // 10
+
+//opcion 2: la ideal y se debe usar en al actualidad
+const widthTwo = area?.dimension?.width;
+console.log(widthTwo); // 10
+const nameNew = product?.type?.subname;
+console.log(nameNew); // undefined
+
+// ----------------------------------------------------------------------------------------
+
+console.log('-----------------------------------------------------------------------------------------');
+
+// ----------------------------------------------------------------------------------------
+// Logical OR assignment (||=): The logical OR assignment (x ||= y) operator only assigns if x is falsy. 
+// ----------------------------------------------------------------------------------------
+// The logical OR operator short-circuits: the second operand is only evaluated if the first operand doesn't already determine the result. 
+
+const objectOne = {
+    tiempo: 0,
+    texto: ''
+};
+
+objectOne.tiempo ||= 340;
+objectOne.texto ||= "No tiene texto";
+objectOne.lugar ||= "No tiene lugar";
+console.log(objectOne); // { tiempo: 340, texto: "No tiene texto", lugar: "No tiene lugar" }
+//-----------------------------------------------------------------------------------------
+
+console.log('-----------------------------------------------------------------------------------------');
+
+// ----------------------------------------------------------------------------------------
+// The logical nullish assignment (x ??= y) operator only assigns if x is nullish (null or undefined). This works only with null and undefined values.
+// ----------------------------------------------------------------------------------------
+const objetoTwo = {
+    tiempo: 0,
+    texto: ''
+};
+
+objetoTwo.tiempo ??= 30;
+objetoTwo.texto ??= "No tiene texto";
+objeto.lugar ??= "No tiene lugar";
+console.log(objetoTwo); // { tiempo: 0, texto: '', lugar: 'No tiene lugar' }
+
+//-----------------------------------------------------------------------------------------
+
+console.log('-----------------------------------------------------------------------------------------');
+
+// ----------------------------------------------------------------------------------------
+// Se puede utilizar el operador ?? (Nullish coalescing operator (??)*) para comprobar si una variable existe o no y mandar a ejecutar una funcion cualquiera. 
+// *The nullish coalescing operator (??) is a logical operator that returns its right-hand side operand when its left-hand side operand is null or undefined, and otherwise returns its left-hand side operand.
+// ----------------------------------------------------------------------------------------
+
+const valorAVerificar1 = [undefined, null, 0, false, "", NaN, true, [],{}];
+
+function ejecutada(valorIN){
+    console.log(`Ejecutada la funcion porque el valor es: ${valorIN}`);
+}
+
+//Si se desea evaluar distintos valores a parte de null o undefined, se puede utilizar if/else.
+
+for (const valor of valorAVerificar1) {
+    if (valor) {
+        ejecutada(valor);
+    } else {
+        console.log(`No se ejecuta la funcion porque el valor es ${valor}`);
+    }
+}
+
+// Hoy en dia se puede utilizar el operador ?? para verificar si existe una variable, es decir, si la variable es null o undefined, ejecuta la funcion.
+console.log("\n Operador ?? \n");
+
+for (const valor of valorAVerificar1) {
+    console.log(valor);
+    valor ?? ejecutada(valor);
+}
+//-----------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------------
+// Hoy en dia se puede utilizar el operador || para verificar si la variable tiene un valor no permitido (false, null, undefined, 0, "", NaN) y asi mandar a ejecutar la funcion. Todo esto mientras no se niegue la variable en la comparacion.
+// ----------------------------------------------------------------------------------------
+
+console.log("\n Operador || \n");
+
+for (const valor of valorAVerificar1) {
+    console.log(valor);
+    valor || ejecutada(valor);
+}
+//-----------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------------
+// Hoy en dia se puede utilizar el operador && para verificar si la variable tiene un valor permitido (true) y asi mandar a ejecutar la funcion. Todo esto mientras no se niegue la variable en la comparacion.
+// ----------------------------------------------------------------------------------------
+
+console.log("\n Operador && \n");
+
+for (const valor of valorAVerificar1) {
+    console.log(valor);
+    valor && ejecutada(valor);
+}
+//-----------------------------------------------------------------------------------------
