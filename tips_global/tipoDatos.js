@@ -254,3 +254,33 @@ for (const valor of valorAVerificar1) {
     valor && ejecutada(valor);
 }
 //-----------------------------------------------------------------------------------------
+
+console.log('-----------------------------------------------------------------------------------------');
+
+// ----------------------------------------------------------------------------------------
+// The logical AND assignment (x &&= y) operator only assigns if x is truthy. 
+// ----------------------------------------------------------------------------------------
+
+// Before you can use if/else to assign a value to a variable, you must first check if the variable has a value.
+let xOneValue = "Valor permitido";
+console.log({xOneValue})
+const newValueAssignment = "Nuevo valor asignado"
+if (xOneValue) {
+    xOneValue = newValueAssignment;
+}
+console.log({xOneValue})
+
+// After you can use the logical AND assignment
+let xOneValueNew = "Valor Permitido";
+let otherValue = null;
+const newValueAssignmentTwo = "Nuevo valor asignado"
+console.log({xOneValueNew})
+console.log({otherValue})
+xOneValueNew &&= newValueAssignmentTwo;
+console.log({xOneValueNew})
+otherValue &&= newValueAssignmentTwo;
+console.log({otherValue})
+
+
+
+// ----------------------------------------------------------------------------------------
