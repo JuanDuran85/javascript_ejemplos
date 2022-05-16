@@ -4,6 +4,32 @@ Ejemplos, trucos y tips para trabajar con distintas funciones en JavaScript o ej
 
 */
 
+// ----------------------------------------------------------------------------------------
+//  JavaScript functions in 4 ways
+// ----------------------------------------------------------------------------------------
+
+// Opcion 1 - Default function declaration
+function rectangleDefault(w,h){
+    return w*h;
+}
+
+// Opcion 2 - Function expression
+const rectangleExpression = function(w,h){
+    return w*h;
+}
+
+// Opcion 3 - Arrow function Expression
+const rectangleArrow = (w,h) => {
+    return w*h;
+}
+
+// Opcion 4 - Concise Function Arrow Expression
+const rectangleArrowConcise = (w,h) => w*h;
+
+// ----------------------------------------------------------------------------------------
+
+
+console.log('-----------------------------------------------------------------------------------------');
 
 // ----------------------------------------------------------------------------------------
 //  Reversing a String with function - Example One using split and reverse
