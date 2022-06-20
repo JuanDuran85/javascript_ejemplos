@@ -273,24 +273,30 @@ console.log('-------------------------------------------------------------------
 // ----------------------------------------------------------------------------------------
 console.log("Join Method");
 const arrayToJoinOne = ["Nuevo","mensaje","desde","Array"];
-const resultArrayToString = arrayToJoinOne.join(" ");
-console.log(resultArrayToString);
+const resultArrayToJoin = arrayToJoinOne.join(" ");
+console.log(resultArrayToJoin);
 
 // ----------------------------------------------------------------------------------------
 console.log('-----------------------------------------------------------------------------------------');
 
 // ----------------------------------------------------------------------------------------
-// 
+// The toString() method returns a string representing the specified array and its elements. 
 // ----------------------------------------------------------------------------------------
 console.log("toString Method");
+const arrayToString = ['JavaScript', 'Python', 'C++', 'C', 'PHP','Java', 'Go']
+const resultArrayToString = arrayToString.toString();
+console.log(resultArrayToString)
 
 // ----------------------------------------------------------------------------------------
 console.log('-----------------------------------------------------------------------------------------');
 
 // ----------------------------------------------------------------------------------------
-// 
+// The toLocaleString() method returns a string representing the elements of the array. The elements are converted to Strings using their toLocaleString methods and these Strings are separated by a locale-specific String (such as a comma ","). 
 // ----------------------------------------------------------------------------------------
 console.log("toLocaleString Method");
+const arrayToLocaleString = []
+
+
 
 // ----------------------------------------------------------------------------------------
 console.log('-----------------------------------------------------------------------------------------');
