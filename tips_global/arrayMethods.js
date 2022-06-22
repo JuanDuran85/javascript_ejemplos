@@ -358,23 +358,33 @@ for (const values of arrayToValues.values()) {
     console.log(values)
 }
 
-
 // ----------------------------------------------------------------------------------------
 console.log('-----------------------------------------------------------------------------------------');
 
 // ----------------------------------------------------------------------------------------
-// 
+// The flat() method creates a new array with all sub-array elements concatenated into it recursively up to the specified depth. 
 // ----------------------------------------------------------------------------------------
 console.log("flat Method");
+const arrayToFlat = ['a',1,[3,'b'],['x','y',[2,4,5,'c']]];
+let resultArrayToFlat = arrayToFlat.flat();
+console.log(resultArrayToFlat);
+resultArrayToFlat = arrayToFlat.flat(2);
+console.log(resultArrayToFlat);
 
 // ----------------------------------------------------------------------------------------
 console.log('-----------------------------------------------------------------------------------------');
 
 
 // ----------------------------------------------------------------------------------------
-// 
+// The flatMap() method returns a new array formed by applying a given callback function to each element of the array, and then flattening the result by one level
 // ----------------------------------------------------------------------------------------
 console.log("flatMap Method");
+const arrayToFlatMap = [1,2,3,[4,5,6],7,[8,[9,10]]];
+let resultArrayToFlatMap = arrayToFlatMap.flatMap(x => x*2); //only one level is flattened
+console.log(resultArrayToFlatMap);
+const arrayToFlatMapTwo = ["Mensaje separado","con comas por", "los espacios"];
+resultArrayToFlatMap = arrayToFlatMapTwo.flatMap(text => text.split(" "));
+console.log(resultArrayToFlatMap);
 
 // ----------------------------------------------------------------------------------------
 console.log('-----------------------------------------------------------------------------------------');
