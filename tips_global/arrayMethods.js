@@ -25,7 +25,6 @@
         - join()
         - toString()
         - toLocaleString()
-        - toJSON()
         - entries()
         - keys()
         - values()
@@ -283,9 +282,9 @@ console.log('-------------------------------------------------------------------
 // The toString() method returns a string representing the specified array and its elements. 
 // ----------------------------------------------------------------------------------------
 console.log("toString Method");
-const arrayToString = ['JavaScript', 'Python', 'C++', 'C', 'PHP','Java', 'Go']
+const arrayToString = ['JavaScript', 'Python', 'C++', 'C', 'PHP','Java', 'Go'];
 const resultArrayToString = arrayToString.toString();
-console.log(resultArrayToString)
+console.log(resultArrayToString);
 
 // ----------------------------------------------------------------------------------------
 console.log('-----------------------------------------------------------------------------------------');
@@ -294,41 +293,71 @@ console.log('-------------------------------------------------------------------
 // The toLocaleString() method returns a string representing the elements of the array. The elements are converted to Strings using their toLocaleString methods and these Strings are separated by a locale-specific String (such as a comma ","). 
 // ----------------------------------------------------------------------------------------
 console.log("toLocaleString Method");
-const arrayToLocaleString = []
-
-
-
-// ----------------------------------------------------------------------------------------
-console.log('-----------------------------------------------------------------------------------------');
-
-// ----------------------------------------------------------------------------------------
-// 
-// ----------------------------------------------------------------------------------------
-console.log("toJSON Method");
+const arrayToLocaleString = [new Date(),'JS',1];
+const resultArrayToLocalString = arrayToLocaleString.toLocaleString();
+console.log(resultArrayToLocalString);
 
 // ----------------------------------------------------------------------------------------
 console.log('-----------------------------------------------------------------------------------------');
 
 // ----------------------------------------------------------------------------------------
-// 
+// The entries() method returns a new Array Iterator object that contains the key/value pairs for each index in the array. 
 // ----------------------------------------------------------------------------------------
-console.log("entries Method");
+console.log("Entries Method");
+const arrayToEntries = [1,2,'f','r',null];
+const resultArrayToEntries = arrayToEntries.entries();  // return a Object [Array Iterator] {}
+console.log(resultArrayToEntries);
+console.log(resultArrayToEntries.next());
+console.log(resultArrayToEntries.next().value);
+console.log(resultArrayToEntries.next().value);
+
+// Usando for of para sacar los valores
+for (const allElements of arrayToEntries.entries()) {
+    console.log(allElements);
+}
+for (const [keyElement, valueElement] of arrayToEntries.entries()) {
+    console.log({keyElement});
+    console.log({valueElement});
+}
 
 // ----------------------------------------------------------------------------------------
 console.log('-----------------------------------------------------------------------------------------');
 
 // ----------------------------------------------------------------------------------------
-// 
+// The keys() method returns a new Array Iterator object that contains the keys for each index in the array.
 // ----------------------------------------------------------------------------------------
 console.log("keys Method");
+const arrayToKeys = [1,2,'f','r',null];
+const resultArrayToKeys = arrayToKeys.keys();
+console.log(resultArrayToKeys);
+console.log(resultArrayToKeys.next());
+console.log(resultArrayToKeys.next().value);
+console.log(resultArrayToKeys.next().value);
+
+// usando for - of
+for (const values of arrayToKeys.keys()) {
+    console.log(values)
+}
 
 // ----------------------------------------------------------------------------------------
 console.log('-----------------------------------------------------------------------------------------');
 
 // ----------------------------------------------------------------------------------------
-// 
+// The values() method returns a new array iterator object that contains the values for each index in the array. 
 // ----------------------------------------------------------------------------------------
 console.log("values Method");
+const arrayToValues = [1,2,'f','r',null];
+const resultArrayToValues = arrayToValues.values();
+console.log(resultArrayToValues);
+console.log(resultArrayToValues.next());
+console.log(resultArrayToValues.next().value);
+console.log(resultArrayToValues.next().value);
+
+// usando for - of
+for (const values of arrayToValues.values()) {
+    console.log(values)
+}
+
 
 // ----------------------------------------------------------------------------------------
 console.log('-----------------------------------------------------------------------------------------');
