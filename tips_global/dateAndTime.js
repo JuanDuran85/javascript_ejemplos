@@ -1,6 +1,7 @@
 /*
 
     Ejemplos, trucos y tips para trabajar con fechas y horas en JavaScript
+
     Para Obtener el año, mes y dia:
         - getFullYear()
         - gerMonth()
@@ -32,6 +33,10 @@
         - toLocaleString()
         - toUTCString()
         - toISOString()
+
+    Para formatear fechas con Intl.
+        The Intl object is the namespace for the ECMAScript Internationalization API, which provides language sensitive string comparison, number formatting, and date and time formatting. The Intl object provides access to several constructors as well as functionality common to the internationalization constructors and other language sensitive functions.
+        - Intl.DateTimeFormat()
 */
 
 // ----------------------------------------------------------------------------------------
@@ -90,3 +95,34 @@ console.log(fechaActual.toISOString()); // Get the ISO 8601 representation of th
 // ----------------------------------------------------------------------------------------
 
 console.log('-----------------------------------------------------------------------------------------');
+
+console.log('-----------------------------------------------------------------------------------------');
+
+// ----------------------------------------------------------------------------------------
+//  Intl.DateTimeFormat() Constructor for objects that enable language-sensitive date and time formatting.
+// ----------------------------------------------------------------------------------------
+    
+const actualDate = new Date();
+const shortDateFormat = {
+    day: '2-digit',
+    month: '2-digit',
+    year: 'numeric'
+};
+const shotDate = new Intl.DateTimeFormat('es',shortDateFormat).format(actualDate);
+console.log({shotDate});
+
+const largeDateFormat = {
+    weekday: 'long',
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric'
+}
+const largeDate = new Intl.DateTimeFormat('es',largeDateFormat).format(actualDate);
+console.log({largeDate})
+
+
+
+// ----------------------------------------------------------------------------------------
+
+console.log('-----------------------------------------------------------------------------------------');
+
