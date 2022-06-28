@@ -342,9 +342,18 @@ console.log('-------------------------------------------------------------------
 console.log('-----------------------------------------------------------------------------------------');
 
 // ----------------------------------------------------------------------------------------
-// 
+// Convert to Boolean: Besides the regular boolean values true and false, JavaScript also treats all other values as either "truthy" or "falsy"
 // ----------------------------------------------------------------------------------------
+const isTrueValue = !0;
+const isFalseValue = !1;
+const alsoFalseValue = !!0;
 
+console.log({isTrueValue});
+console.log(typeof isTrueValue);
+console.log({isFalseValue});
+console.log(typeof isFalseValue);
+console.log({alsoFalseValue});
+console.log(typeof alsoFalseValue);
 
 //-----------------------------------------------------------------------------------------
 
