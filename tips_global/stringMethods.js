@@ -11,6 +11,11 @@
         - includes
         - indexOf
         - lastIndexOf
+        - localeCompare
+        - match
+        - matchAll
+        - normalize
+        - padEnd
         - replace
         - search
         - slice
@@ -19,7 +24,6 @@
         - valueOf
         - trim
         - toString
-        - match
         - split
         - toLowerCase
         -
@@ -141,11 +145,10 @@ console.log("-------------------------------------------------------------------
 // The indexOf() method, given one argument: a substring to search for, searches the entire calling string, and returns the index of the first occurrence of the specified substring. Given a second argument: a number, the method returns the first occurrence of the specified substring at an index greater than or equal to the specified number.
 //-----------------------------------------------------------------------------------
 console.log("indexOf method");
-//-----------------------------------------------------------------------------------
 const textoToIndexOf = "Aplicando el metodo indexOf en JS";
 console.log(`Texto original: ${textoToIndexOf}`);
 console.log(`Texto a buscar 'JS': ${textoToIndexOf.indexOf("JS")}`);
-
+//-----------------------------------------------------------------------------------
 console.log("----------------------------------------------------------------------");
 
 
@@ -154,53 +157,76 @@ console.log("-------------------------------------------------------------------
 // The lastIndexOf() method, given one argument: a substring to search for, searches the entire calling string, and returns the index of the last occurrence of the specified substring. Given a second argument: a number, the method returns the last occurrence of the specified substring at an index less than or equal to the specified number.
 //-----------------------------------------------------------------------------------
 console.log("lastIndexOf method");
-
-
+const textoToLastIndexOf = "Aplicando el metodo lastIndexOf en con el lenguaje de programacion JS";
+console.log(`Texto original: ${textoToLastIndexOf}`);
+console.log(`Texto a buscar 'JS': ${textoToLastIndexOf.lastIndexOf("JS")}`);
+console.log(`Texto a buscar 'el': ${textoToLastIndexOf.lastIndexOf("el")}`);
+console.log(`Texto a buscar 'Python': ${textoToLastIndexOf.lastIndexOf("Python")}`);
 //-----------------------------------------------------------------------------------
 console.log("----------------------------------------------------------------------");
 
 
 console.log("----------------------------------------------------------------------");
 //-----------------------------------------------------------------------------------
-//
+// The localeCompare() method returns a number indicating whether a reference string comes before, or after, or is the same as the given string in sort order. 
 //-----------------------------------------------------------------------------------
-console.log(" method");
-//-----------------------------------------------------------------------------------
-console.log("----------------------------------------------------------------------");
-
-
-console.log("----------------------------------------------------------------------");
-//-----------------------------------------------------------------------------------
-//
-//-----------------------------------------------------------------------------------
-console.log(" method");
+console.log("localeCompare method");
+const textToLocaleCompare = ['réservé', 'Premier', 'Cliché', 'communiqué', 'café', 'Adieu'];
+const resultLocaleCompare = textToLocaleCompare.sort( (a, b) => a.localeCompare(b, 'fr', { ignorePunctuation: true }));
+console.log(resultLocaleCompare);
 //-----------------------------------------------------------------------------------
 console.log("----------------------------------------------------------------------");
 
 
 console.log("----------------------------------------------------------------------");
 //-----------------------------------------------------------------------------------
-//
+// The match() method retrieves the result of matching a string against a regular expression. 
 //-----------------------------------------------------------------------------------
-console.log(" method");
-//-----------------------------------------------------------------------------------
-console.log("----------------------------------------------------------------------");
-
-
-console.log("----------------------------------------------------------------------");
-//-----------------------------------------------------------------------------------
-//
-//-----------------------------------------------------------------------------------
-console.log(" method");
+console.log("match method");
+const textToMatch = "Aplicando el metodo match en JS";
+const regularExpresionToMach = /[A-Z]/g;
+console.log(`Texto original: ${textToMatch}`);
+console.log(`Texto a buscar '/[A-Z]/g': ${textToMatch.match(regularExpresionToMach)}`);
 //-----------------------------------------------------------------------------------
 console.log("----------------------------------------------------------------------");
 
 
 console.log("----------------------------------------------------------------------");
 //-----------------------------------------------------------------------------------
-//
+// The matchAll() method returns an iterator of all results matching a string against a regular expression, including capturing groups. 
 //-----------------------------------------------------------------------------------
-console.log(" method");
+console.log("matchAll method");
+const textToMatchAll = "Aplicando el metodo matchAll en JS";
+const regularExpresionToMachAll = /[A-Z]/g;
+console.log(`Texto original: ${textToMatchAll}`);
+console.log(`Texto a buscar '/[A-Z]/g': ${[...textToMatchAll.matchAll(regularExpresionToMachAll)]}`);
+//-----------------------------------------------------------------------------------
+console.log("----------------------------------------------------------------------");
+
+
+console.log("----------------------------------------------------------------------");
+//-----------------------------------------------------------------------------------
+// The normalize() method returns the Unicode Normalization Form of the string. 
+//-----------------------------------------------------------------------------------
+console.log("normalize method");
+let string1 = '\u00F1';           // ñ
+let string2 = '\u006E\u0303';     // ñ
+
+string1 = string1.normalize('NFD');
+string2 = string2.normalize('NFD');
+
+console.log(string1 === string2); // true
+console.log(string1.length);      // 2
+console.log(string2.length);      // 2
+//-----------------------------------------------------------------------------------
+console.log("----------------------------------------------------------------------");
+
+
+console.log("----------------------------------------------------------------------");
+//-----------------------------------------------------------------------------------
+// The padEnd() method pads the current string with a given string (repeated, if needed) so that the resulting string reaches a given length. The padding is applied from the end of the current string. 
+//-----------------------------------------------------------------------------------
+console.log("padEnd method");
 //-----------------------------------------------------------------------------------
 console.log("----------------------------------------------------------------------");
 
