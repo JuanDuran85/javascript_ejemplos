@@ -227,6 +227,9 @@ console.log("-------------------------------------------------------------------
 // The padEnd() method pads the current string with a given string (repeated, if needed) so that the resulting string reaches a given length. The padding is applied from the end of the current string. 
 //-----------------------------------------------------------------------------------
 console.log("padEnd method");
+const textoToPadEnd = "Aplicando el metodo padEnd";
+console.log(`Texto original: ${textoToPadEnd}`);
+console.log(`Texto con padEnd '*': ${textoToPadEnd.padEnd(35, ".")}`);
 //-----------------------------------------------------------------------------------
 console.log("----------------------------------------------------------------------");
 
