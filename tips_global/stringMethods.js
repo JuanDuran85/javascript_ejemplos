@@ -6,6 +6,9 @@
         - codePointAt
         - concat
         - endsWith
+        - fromCharCode
+        - fromCodePoint
+        - includes
         - indexOf
         - lastIndexOf
         - replace
@@ -16,10 +19,9 @@
         - valueOf
         - trim
         - toString
-        - includes
         - match
         - split
-        -toLowerCase
+        - toLowerCase
         -
         -
         -
@@ -92,52 +94,68 @@ console.log("-------------------------------------------------------------------
 //-----------------------------------------------------------------------------------
 // The endsWith() method determines whether a string ends with the characters of a specified string, returning true or false as appropriate. 
 //-----------------------------------------------------------------------------------
-console.log(" method");
+console.log("endsWith method");
+const textoToEndsWith = "Aplicando el metodo endsWith";
+console.log(`Texto original: ${textoToEndsWith}`);
+console.log(`Texto a buscar: ${textoToEndsWith.endsWith("metodo")}`);
+console.log(`Texto a buscar: ${textoToEndsWith.endsWith("endsWith")}`);
+console.log(`Texto a buscar: ${textoToEndsWith.endsWith("el", 12)}`);
 //-----------------------------------------------------------------------------------
 console.log("----------------------------------------------------------------------");
 
 
 console.log("----------------------------------------------------------------------");
 //-----------------------------------------------------------------------------------
-//
+// The static String.fromCharCode() method returns a string created from the specified sequence of UTF-16 code units. 
 //-----------------------------------------------------------------------------------
-console.log(" method");
-//-----------------------------------------------------------------------------------
-console.log("----------------------------------------------------------------------");
-
-
-console.log("----------------------------------------------------------------------");
-//-----------------------------------------------------------------------------------
-//
-//-----------------------------------------------------------------------------------
-console.log(" method");
+console.log("fromCharCode method");
+console.log(`Aplicando el metodo fromCharCode: ${String.fromCharCode(65, 66, 67)}`);
 //-----------------------------------------------------------------------------------
 console.log("----------------------------------------------------------------------");
 
 
 console.log("----------------------------------------------------------------------");
 //-----------------------------------------------------------------------------------
-//
+// The static String.fromCodePoint() method returns a string created by using the specified sequence of code points. 
 //-----------------------------------------------------------------------------------
-console.log(" method");
+console.log("fromCodePoint method");
+console.log(`Aplicando el metodo fromCodePoint: ${String.fromCodePoint(9731, 9733, 9842, 0x2F804)}`);
 //-----------------------------------------------------------------------------------
 console.log("----------------------------------------------------------------------");
 
 
 console.log("----------------------------------------------------------------------");
 //-----------------------------------------------------------------------------------
-//
+// The includes() method performs a case-sensitive search to determine whether one string may be found within another string, returning true or false as appropriate. 
 //-----------------------------------------------------------------------------------
 console.log(" method");
+const textToIncludes = "Aplicando el metodo includes en JS";
+console.log(`Texto original: ${textToIncludes}`);
+console.log(`Texto a buscar 'JS': ${textToIncludes.includes("JS")}`);
 //-----------------------------------------------------------------------------------
 console.log("----------------------------------------------------------------------");
 
 
 console.log("----------------------------------------------------------------------");
 //-----------------------------------------------------------------------------------
-//
+// The indexOf() method, given one argument: a substring to search for, searches the entire calling string, and returns the index of the first occurrence of the specified substring. Given a second argument: a number, the method returns the first occurrence of the specified substring at an index greater than or equal to the specified number.
 //-----------------------------------------------------------------------------------
-console.log(" method");
+console.log("indexOf method");
+//-----------------------------------------------------------------------------------
+const textoToIndexOf = "Aplicando el metodo indexOf en JS";
+console.log(`Texto original: ${textoToIndexOf}`);
+console.log(`Texto a buscar 'JS': ${textoToIndexOf.indexOf("JS")}`);
+
+console.log("----------------------------------------------------------------------");
+
+
+console.log("----------------------------------------------------------------------");
+//-----------------------------------------------------------------------------------
+// The lastIndexOf() method, given one argument: a substring to search for, searches the entire calling string, and returns the index of the last occurrence of the specified substring. Given a second argument: a number, the method returns the last occurrence of the specified substring at an index less than or equal to the specified number.
+//-----------------------------------------------------------------------------------
+console.log("lastIndexOf method");
+
+
 //-----------------------------------------------------------------------------------
 console.log("----------------------------------------------------------------------");
 
