@@ -33,6 +33,9 @@
         - at()
         - concat()
         - from()
+        - includes()
+        - isArray()
+        - of()
 
 */
 
@@ -408,14 +411,13 @@ console.log(resultArrayToAt);
 console.log('-----------------------------------------------------------------------------------------');
 
 //-----------------------------------------------------------------------------------
-// The concat() method concatenates the string arguments to the calling string and returns a new string. 
+// The concat() method is used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array.  
 //-----------------------------------------------------------------------------------
 console.log("Concat method");
-const textoToConcatOne = "Aplicando el";
-const textoToConcatTwo = "Metodo concat";
+const textoToConcatOne = ["Aplicando el"];
+const textoToConcatTwo = ["Metodo concat"];
 console.log(`Textos originales: 1. ${textoToConcatOne} - 2. ${textoToConcatTwo}`);
 console.log(`Aplicando concat: ${textoToConcatOne.concat(textoToConcatTwo)}`);
-console.log(`Aplicando concat: ${textoToConcatOne.concat(': ',textoToConcatTwo)}`);
 //-----------------------------------------------------------------------------------
 console.log("----------------------------------------------------------------------");
 
@@ -434,5 +436,42 @@ const resultArrayWithMap = Array.from(new Map([['a',1],['b',2],['c',3]]));
 console.log(`Aplicando Array.from: ${resultArrayWithMap}`);
 const resultArrayFromWithFunction = Array.from(new Set([1,3,5,2,1,4,2,3,1,5,6]), x => x**2);
 console.log(`Aplicando Array.from: ${resultArrayFromWithFunction}`);
+//-----------------------------------------------------------------------------------
+console.log("----------------------------------------------------------------------");
+
+//-----------------------------------------------------------------------------------
+// The includes() method determines whether an array includes a certain value among its entries, returning true or false as appropriate. 
+//-----------------------------------------------------------------------------------
+console.log("Includes method");
+const textToIncludes = ["Casa","Carro","Perro"];
+console.log(`Texto original: ${textToIncludes}`);
+console.log(`Texto a buscar 'JS': ${textToIncludes.includes("JS")}`);
+console.log(`Texto a buscar 'Carro': ${textToIncludes.includes("Carro")}`);
+//-----------------------------------------------------------------------------------
+console.log("----------------------------------------------------------------------");
+
+
+//-----------------------------------------------------------------------------------
+// The Array.isArray() method determines whether the passed value is an Array. 
+//-----------------------------------------------------------------------------------
+console.log("IsArray method");
+console.log(`Aplicando el metodo estatico isArray: ${Array.isArray([1,3,4])}`);
+console.log(`Aplicando el metodo estatico isArray: ${Array.isArray("Ejemplo con isArray")}`);
+console.log(`Aplicando el metodo estatico isArray: ${Array.isArray({key: 'value'})}`);
+
+//-----------------------------------------------------------------------------------
+console.log("----------------------------------------------------------------------");
+
+//-----------------------------------------------------------------------------------
+// The Array.of() method creates a new Array instance from a variable number of arguments, regardless of number or type of the arguments. 
+//-----------------------------------------------------------------------------------
+console.log("Of method");
+const resultArrayOfOne = Array.of("Metodo Array.of()");
+console.log(resultArrayOfOne);
+const resultArrayOfTwo = Array.of({key:'value'});
+console.log(resultArrayOfTwo);
+const resultArrayOfThree = Array.of(3,5,1,6,4,8);
+console.log(resultArrayOfThree);
+
 //-----------------------------------------------------------------------------------
 console.log("----------------------------------------------------------------------");

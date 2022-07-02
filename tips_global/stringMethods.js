@@ -132,7 +132,7 @@ console.log("-------------------------------------------------------------------
 //-----------------------------------------------------------------------------------
 // The includes() method performs a case-sensitive search to determine whether one string may be found within another string, returning true or false as appropriate. 
 //-----------------------------------------------------------------------------------
-console.log(" method");
+console.log("Includes method");
 const textToIncludes = "Aplicando el metodo includes en JS";
 console.log(`Texto original: ${textToIncludes}`);
 console.log(`Texto a buscar 'JS': ${textToIncludes.includes("JS")}`);
