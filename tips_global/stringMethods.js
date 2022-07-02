@@ -1,6 +1,7 @@
 /*
 
     Metodos de String en JavaScript - JavaScript String Methods Cheat Sheet
+        - at
         - chartAt
         - charCodeAt
         - codePointAt
@@ -16,7 +17,11 @@
         - matchAll
         - normalize
         - padEnd
+        - padStart
+        - raw
+        - repeat
         - replace
+        - replaceAll
         - search
         - slice
         - substr
@@ -236,13 +241,131 @@ console.log("-------------------------------------------------------------------
 
 console.log("----------------------------------------------------------------------");
 //-----------------------------------------------------------------------------------
+// The padStart() method pads the current string with another string (multiple times, if needed) until the resulting string reaches the given length. The padding is applied from the start of the current string. 
+//-----------------------------------------------------------------------------------
+console.log("padStart method");
+const textoToPadStart = "Aplicando el metodo padStart";
+console.log(`Texto original: ${textoToPadStart}`);
+console.log(`Texto con padEnd '.': ${textoToPadStart.padStart(35, ".")}`);
+//-----------------------------------------------------------------------------------
+console.log("----------------------------------------------------------------------");
+
+
+console.log("----------------------------------------------------------------------");
+//-----------------------------------------------------------------------------------
+// The static String.raw() method is a tag function of template literals. This is similar to the r prefix in Python, or the @ prefix in C# for string literals. It's used to get the raw string form of template literals, that is, substitutions (e.g. ${foo}) are processed, but escapes (e.g. \n) are not. 
+//-----------------------------------------------------------------------------------
+console.log("raw method");
+const resultStringWithRaw = String.raw`\home\js\Directorio\programas\javascript_ejemplos\tips_global\stringMethods.js`;
+console.log(resultStringWithRaw);
+//-----------------------------------------------------------------------------------
+console.log("----------------------------------------------------------------------");
+
+
+console.log("----------------------------------------------------------------------");
+//-----------------------------------------------------------------------------------
+// The repeat() method constructs and returns a new string which contains the specified number of copies of the string on which it was called, concatenated together. 
+//-----------------------------------------------------------------------------------
+console.log("repeat method");
+const textoToRepeat = "Texto repetido con el metodo repeat. ";
+console.log(`Texto original: ${textoToRepeat}`);
+console.log(`Texto repetido: ${textoToRepeat.repeat(3)}`);
+//-----------------------------------------------------------------------------------
+console.log("----------------------------------------------------------------------");
+
+
+console.log("----------------------------------------------------------------------");
+//-----------------------------------------------------------------------------------
+// The replace() method returns a new string with some or all matches of a pattern replaced by a replacement. The pattern can be a string or a RegExp, and the replacement can be a string or a function called for each match. If pattern is a string, only the first occurrence will be replaced. 
+//-----------------------------------------------------------------------------------
+console.log("replace method");
+const textToReplace = "Aplicando el metodo replace en JS";
+console.log(`Texto original: ${textToReplace}`);
+console.log(`Texto a remplazar 'JS': ${textToReplace.replace("JS","JavaSript")}`);
+const regExpToReplace = /metodo/gi;
+console.log(`Texto a remplazar 'metodo': ${textToReplace.replace(regExpToReplace, "Método")}`);
+//-----------------------------------------------------------------------------------
+console.log("----------------------------------------------------------------------");
+
+
+console.log("----------------------------------------------------------------------");
+//-----------------------------------------------------------------------------------
+// The replaceAll() method returns a new string with all matches of a pattern replaced by a replacement. The pattern can be a string or a RegExp, and the replacement can be a string or a function to be called for each match. 
+//-----------------------------------------------------------------------------------
+console.log("replaceAll method");
+const textToReplaceAll = "Aplicando el metodo replaceAll en JS. El metodo retorna un string con todas las coincidencias remplazadas en JS.";
+console.log(`Texto original: ${textToReplaceAll}`);
+console.log(`Texto a remplazar 'JS': ${textToReplaceAll.replaceAll("JS","JavaSript")}`);
+const regExpToReplaceAll = /metodo/gi;
+console.log(`Texto a remplazar 'metodo': ${textToReplaceAll.replaceAll(regExpToReplaceAll, "Método")}`);
+//-----------------------------------------------------------------------------------
+console.log("----------------------------------------------------------------------");
+
+
+console.log("----------------------------------------------------------------------");
+//-----------------------------------------------------------------------------------
+// The search() method executes a search for a match between a regular expression and this String object. 
+//-----------------------------------------------------------------------------------
+console.log("search method");
+const textToSearch = "Aplicando el metodo search en JS";
+console.log(`Texto original: ${textToSearch}`);
+console.log(`Texto a buscar 'JS': ${textToSearch.search("JS")}`);
+const regExpToSearch = /(metodo)/g;
+console.log(`Texto a buscar 'metodo': ${textToSearch.search(regExpToSearch)}`);
+console.log(textToSearch[textToSearch.search(regExpToSearch)]);
+//-----------------------------------------------------------------------------------
+console.log("----------------------------------------------------------------------");
+
+
+console.log("----------------------------------------------------------------------");
+//-----------------------------------------------------------------------------------
+// The slice() method extracts a section of a string and returns it as a new string, without modifying the original string. 
+//-----------------------------------------------------------------------------------
+console.log("slice method");
+const textToSlice = "Aplicando el metodo slice en JS";
+console.log(`Texto original: ${textToSlice}`);
+console.log(`Texto a extraer 'slice': ${textToSlice.slice(20,25)}`);
+console.log(`Texto a extraer 'JS': ${textToSlice.slice(-2)}`);
+//-----------------------------------------------------------------------------------
+console.log("----------------------------------------------------------------------");
+
+
+console.log("----------------------------------------------------------------------");
+//-----------------------------------------------------------------------------------
+// The split() method takes a pattern and divides a String into an ordered list of substrings by searching for the pattern, puts these substrings into an array, and returns the array.
+//-----------------------------------------------------------------------------------
+console.log("split method");
+const textToSplit = "Aplicando el metodo split en JS";
+console.log(`Texto original: ${textToSplit}`);
+console.log(`Resultado del split al texto original: ${textToSplit.split(' ')}`);
+console.log(`Resultado del split con limite al texto original: ${textToSplit.split('', 9)}`);
+const textoToSplitTwo = "Aplicando 1 el metodo split 2 en JS";
+console.log(`Texto original: ${textoToSplitTwo}`);
+const regExpToSplit = /(\d)/g;
+const resultTextToSplit = textoToSplitTwo.split(regExpToSplit);
+console.log(resultTextToSplit);
+//-----------------------------------------------------------------------------------
+console.log("----------------------------------------------------------------------");
+
+
+console.log("----------------------------------------------------------------------");
+//-----------------------------------------------------------------------------------
+// 
+//-----------------------------------------------------------------------------------
+console.log(" method");
+
+//-----------------------------------------------------------------------------------
+console.log("----------------------------------------------------------------------");
+
+
+console.log("----------------------------------------------------------------------");
+//-----------------------------------------------------------------------------------
 //
 //-----------------------------------------------------------------------------------
 console.log(" method");
 //-----------------------------------------------------------------------------------
 console.log("----------------------------------------------------------------------");
 
-
 console.log("----------------------------------------------------------------------");
 //-----------------------------------------------------------------------------------
 //
@@ -250,34 +373,6 @@ console.log("-------------------------------------------------------------------
 console.log(" method");
 //-----------------------------------------------------------------------------------
 console.log("----------------------------------------------------------------------");
-
-
-console.log("----------------------------------------------------------------------");
-//-----------------------------------------------------------------------------------
-//
-//-----------------------------------------------------------------------------------
-console.log(" method");
-//-----------------------------------------------------------------------------------
-console.log("----------------------------------------------------------------------");
-
-
-console.log("----------------------------------------------------------------------");
-//-----------------------------------------------------------------------------------
-//
-//-----------------------------------------------------------------------------------
-console.log(" method");
-//-----------------------------------------------------------------------------------
-console.log("----------------------------------------------------------------------");
-
-
-console.log("----------------------------------------------------------------------");
-//-----------------------------------------------------------------------------------
-//
-//-----------------------------------------------------------------------------------
-console.log(" method");
-//-----------------------------------------------------------------------------------
-console.log("----------------------------------------------------------------------");
-
 
 console.log("----------------------------------------------------------------------");
 //-----------------------------------------------------------------------------------
