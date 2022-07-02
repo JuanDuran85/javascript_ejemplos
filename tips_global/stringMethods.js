@@ -84,7 +84,7 @@ console.log("-------------------------------------------------------------------
 //-----------------------------------------------------------------------------------
 // The concat() method concatenates the string arguments to the calling string and returns a new string. 
 //-----------------------------------------------------------------------------------
-console.log(" method");
+console.log("Concat method");
 const textoToConcatOne = "Aplicando el";
 const textoToConcatTwo = "Metodo concat";
 console.log(`Textos originales: 1. ${textoToConcatOne} - 2. ${textoToConcatTwo}`);

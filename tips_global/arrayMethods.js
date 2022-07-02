@@ -30,6 +30,9 @@
         - values()
         - flat()
         - flatMap()
+        - at()
+        - concat()
+        - from()
 
 */
 
@@ -388,3 +391,48 @@ console.log(resultArrayToFlatMap);
 
 // ----------------------------------------------------------------------------------------
 console.log('-----------------------------------------------------------------------------------------');
+
+
+// ----------------------------------------------------------------------------------------
+// The at() method takes an integer value and returns the item at that index, allowing for positive and negative integers. Negative integers count back from the last item in the array.
+// ----------------------------------------------------------------------------------------
+console.log("At Method");
+const arrayToAt = [1,2,3,[4,5,6],7,[8,[9,10]]];
+let resultArrayToAt = arrayToAt.at(0);
+console.log(resultArrayToAt);
+const arrayToAtTwo = ["Mensaje separado","con comas por", "los espacios"];
+resultArrayToAt = arrayToAtTwo.at(-1);
+console.log(resultArrayToAt);
+
+// ----------------------------------------------------------------------------------------
+console.log('-----------------------------------------------------------------------------------------');
+
+//-----------------------------------------------------------------------------------
+// The concat() method concatenates the string arguments to the calling string and returns a new string. 
+//-----------------------------------------------------------------------------------
+console.log("Concat method");
+const textoToConcatOne = "Aplicando el";
+const textoToConcatTwo = "Metodo concat";
+console.log(`Textos originales: 1. ${textoToConcatOne} - 2. ${textoToConcatTwo}`);
+console.log(`Aplicando concat: ${textoToConcatOne.concat(textoToConcatTwo)}`);
+console.log(`Aplicando concat: ${textoToConcatOne.concat(': ',textoToConcatTwo)}`);
+//-----------------------------------------------------------------------------------
+console.log("----------------------------------------------------------------------");
+
+
+//-----------------------------------------------------------------------------------
+// The Array.from() static method creates a new, shallow-copied Array instance from an iterable or array-like object.
+//-----------------------------------------------------------------------------------
+console.log("From method");
+const texToFrom = "Aplicando el Metodo estatico from";
+console.log(`Textos original ${texToFrom}`);
+console.log(`Aplicando Array.from: ${Array.from(texToFrom)}`);
+const texToFromWithSet = ["AA","BB","AA","CC","DD","AA","CC"];
+const resultArrayFromSet = Array.from(new Set(texToFromWithSet)); // Array.from can be used to create a new array from an iterable object with Set or Map.
+console.log(`Aplicando Array.from: ${resultArrayFromSet}`);
+const resultArrayWithMap = Array.from(new Map([['a',1],['b',2],['c',3]]));
+console.log(`Aplicando Array.from: ${resultArrayWithMap}`);
+const resultArrayFromWithFunction = Array.from(new Set([1,3,5,2,1,4,2,3,1,5,6]), x => x**2);
+console.log(`Aplicando Array.from: ${resultArrayFromWithFunction}`);
+//-----------------------------------------------------------------------------------
+console.log("----------------------------------------------------------------------");
