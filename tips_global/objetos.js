@@ -165,6 +165,25 @@ const school = {
 
 const { nombre, edad } = school;
 console.log(nombre, edad);
+//-----------------------------------------------------------------------------------------
 
 
+console.log('-----------------------------------------------------------------------------------------');
+
+// ----------------------------------------------------------------------------------------
+// Object Destructuring: is a new way to extract elements from an object
+// ----------------------------------------------------------------------------------------
+
+const carOne = {
+    name: "BMW",
+    colour: "White"
+};
+
+// Before ES6 vertion
+const name = carOne.name;
+const colour = carOne.colour;
+
+// Using object destructuring
+const { name: carName, colour: carColour } = carOne;
+console.log(carName, carColour);
 //-----------------------------------------------------------------------------------------
