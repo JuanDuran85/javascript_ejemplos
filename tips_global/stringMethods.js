@@ -32,10 +32,9 @@
         - toString
         - toUpperCasa
         - trim
+        - trimEnd
+        - trimStart
         - valueOf
-        -
-        -
-        -
 */
 
 console.log("----------------------------------------------------------------------");
@@ -418,10 +417,10 @@ console.log("-------------------------------------------------------------------
 // The toString() method returns a string representing the specified object. 
 //-----------------------------------------------------------------------------------
 console.log("toString method");
-const textToString = new String("Aplicando el metodo toString en JS");
+const textToString = String("Aplicando el metodo toString en JS");
 console.log(`Texto original: ${textToString}`);
 console.log(`Texto a convertir a string: ${textToString.toString()}`);
-const numberToString = new Number(123);
+const numberToString = Number(123);
 console.log(`Numero original: ${numberToString}`);
 console.log(`Numero a convertir a string: ${numberToString.toString()}`);
 //-----------------------------------------------------------------------------------
@@ -445,7 +444,7 @@ console.log("-------------------------------------------------------------------
 // The trim() method removes whitespace from both ends of a string and returns a new string, without modifying the original string. Whitespace in this context is all the whitespace characters (space, tab, no-break space, etc.) and all the line terminator characters (LF, CR, etc.). 
 //-----------------------------------------------------------------------------------
 console.log("trim method");
-const textToTrim = "Aplicando el metodo trim en JS";
+const textToTrim = "        Aplicando el metodo trim en JS           ";
 console.log(`Texto original: ${textToTrim}`);
 console.log(`Texto a convertir a string: ${textToTrim.trim()}`);
 //-----------------------------------------------------------------------------------
@@ -454,44 +453,35 @@ console.log("-------------------------------------------------------------------
 
 console.log("----------------------------------------------------------------------");
 //-----------------------------------------------------------------------------------
-//
+// The trimEnd() method removes whitespace from the end of a string. trimRight() is an alias of this method. 
 //-----------------------------------------------------------------------------------
-console.log(" method");
-//-----------------------------------------------------------------------------------
-console.log("----------------------------------------------------------------------");
-
-
-console.log("----------------------------------------------------------------------");
-//-----------------------------------------------------------------------------------
-//
-//-----------------------------------------------------------------------------------
-console.log(" method");
+console.log("trimEnd method");
+const textToTrimEnd = "        Aplicando el metodo trimEnd en JS           ";
+console.log(`Texto original: ${textToTrimEnd}`);
+console.log(`Texto a convertir a string: ${textToTrimEnd.trimEnd()}`);
 //-----------------------------------------------------------------------------------
 console.log("----------------------------------------------------------------------");
 
 
 console.log("----------------------------------------------------------------------");
 //-----------------------------------------------------------------------------------
-//
+// The trimStart() method removes whitespace from the beginning of a string. trimLeft() is an alias of this method. 
 //-----------------------------------------------------------------------------------
-console.log(" method");
-//-----------------------------------------------------------------------------------
-console.log("----------------------------------------------------------------------");
-
-
-console.log("----------------------------------------------------------------------");
-//-----------------------------------------------------------------------------------
-//
-//-----------------------------------------------------------------------------------
-console.log(" method");
+console.log("trimStart method");
+const textToTrimStart = "        Aplicando el metodo trimStart en JS           ";
+console.log(`Texto original: ${textToTrimStart}`);
+console.log(`Texto a convertir a string: ${textToTrimStart.trimStart()}`);
 //-----------------------------------------------------------------------------------
 console.log("----------------------------------------------------------------------");
 
 
 console.log("----------------------------------------------------------------------");
 //-----------------------------------------------------------------------------------
-//
+// The valueOf() method returns the primitive value of a String object. 
 //-----------------------------------------------------------------------------------
-console.log(" method");
+console.log("valueOf method");
+const textToValueOf = String("Aplicando el metodo valueOf en JS");
+console.log(`Texto original: ${textToValueOf}`);
+console.log(`Texto a convertir a string: ${textToValueOf.valueOf()}`);
 //-----------------------------------------------------------------------------------
 console.log("----------------------------------------------------------------------");
