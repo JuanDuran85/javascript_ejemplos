@@ -33,11 +33,11 @@ console.log('-------------------------------------------------------------------
 // Existen dos posibles maneras de redondear un numero hacia abajo, la primera es usando Math.round, utilizando el operador ~~, el cual es una operacion bitwise OR.
 // ----------------------------------------------------------------------------------------
 
-// Opcion 1: Math.floor
+// Opcion 1: Math.floor (long)
 const numeroUno = Math.floor(6.8)
 console.log(numeroUno); // 6
 
-//Opcion 2: ~~
+//Opcion 2: ~~ (short)
 const numeroDos = ~~6.8;
 console.log(numeroDos); // 6
 
@@ -107,13 +107,11 @@ console.log('-------------------------------------------------------------------
 // Existen dos maneras de elevar un nuevo a un valor x. La primera puede ser utilizando la libreria Math con el metodo pow, la segunda puede ser la utilizacion del operador **.
 // ----------------------------------------------------------------------------------------
 
-//opcion 1: Math.pow
+//opcion 1: Math.pow (long)
 console.log(Math.pow(2, 3)); // 8
 
-//opcion 2: **
+//opcion 2: ** (short)
 console.log(2 ** 3); // 8
-
-
 // ----------------------------------------------------------------------------------------
 
 console.log('-----------------------------------------------------------------------------------------');
@@ -132,8 +130,6 @@ console.log(stringUno); // Texto X Texto X Texto X Texto X
 //opcion 2: la ideal usando repeat
 const stringDos = "Texto Y ".repeat(5);
 console.log(stringDos); // Texto Y Texto Y Texto Y Texto Y
-
-
 // ----------------------------------------------------------------------------------------
 
 console.log('-----------------------------------------------------------------------------------------');
@@ -379,6 +375,9 @@ console.log({numberConverter});
 
 const strNumberConverter = "67011.494" | 0;
 console.log({strNumberConverter});
+
+const comparation = ~~7.89 === 7;
+console.log({comparation});
 
 //-----------------------------------------------------------------------------------------
 

@@ -120,7 +120,7 @@ console.log(arregloConcatenadoDos);
 console.log('-----------------------------------------------------------------------------------------');
 
 // ----------------------------------------------------------------------------------------
-// Dos formas de eliminar elementos de un array en JS -  When you delete an array element, the array length is not affected. This holds even if you delete the last element of the array. When the delete operator removes an array element, that element is no longer in the array
+// Using delete to erase an element in an array -  When you delete an array element, the array length is not affected. This holds even if you delete the last element of the array. When the delete operator removes an array element, that element is no longer in the array
 // ----------------------------------------------------------------------------------------
 // 1. usando delete
 console.log("Utilizando delete")
@@ -129,5 +129,39 @@ console.log({arrayElementosToDelete});
 delete arrayElementosToDelete[3];
 console.log({arrayElementosToDelete});
 
+// ----------------------------------------------------------------------------------------
+
+console.log('-----------------------------------------------------------------------------------------');
+
+// ----------------------------------------------------------------------------------------
+// String to array in JS
+// ----------------------------------------------------------------------------------------
+console.log("1. Split string to array");
+const stringToArrayWithSplit = "JavaScript-JS";
+console.log(stringToArrayWithSplit.split("-"));
+
+console.log("2. Array From");
+const stringToArrayWithArrayFrom = "JavaScript-JS";
+console.log(Array.from(stringToArrayWithArrayFrom));
+
+console.log("3. Object assign");
+const stringToArrayWithObjectAssign = "JavaScript-JS";
+console.log(Object.assign([], stringToArrayWithObjectAssign));
+
+console.log("4. Spread operator");
+const stringToArrayWithSpreadOperator = "JavaScript-JS";
+console.log([...stringToArrayWithSpreadOperator]);
+
+console.log("5. Manual for loop");
+const stringToArrayWithManualForLoop = "JavaScript-JS";
+let arrayFinal = [];
+for (let index of stringToArrayWithManualForLoop) {
+  arrayFinal.push(index);
+}
+console.log({arrayFinal});
+
+console.log("6. JSON Parse");
+const stringToArrayWithJSONParse = '["J","a","v","a","S","c","r","i","p","t"]';
+console.log(JSON.parse(stringToArrayWithJSONParse));
 
 // ----------------------------------------------------------------------------------------

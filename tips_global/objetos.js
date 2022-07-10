@@ -67,6 +67,14 @@ console.log('-------------------------------------------------------------------
 const fromEntriesResult = Object.fromEntries(entriesResult);
 console.log(fromEntriesResult);
 
+const matrixArrysPerson = [
+    ['name','Juan'],
+    ['apellido','Perez'],
+    ['edad',23],
+    ['ciudad','Bogota']
+];
+const objWithFromEntries = Object.fromEntries(matrixArrysPerson);
+console.log({objWithFromEntries});
 //-----------------------------------------------------------------------------------------
 
 console.log('-----------------------------------------------------------------------------------------');

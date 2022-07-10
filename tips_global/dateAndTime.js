@@ -116,12 +116,25 @@ const largeDateFormat = {
     day: 'numeric',
     month: 'long',
     year: 'numeric'
-}
+};
 const largeDate = new Intl.DateTimeFormat('es',largeDateFormat).format(actualDate);
-console.log({largeDate})
+console.log({largeDate});
 
-
-
+const completeFormat = {
+    // Values can be 'long', 'short', ot 'numeric'
+    day: 'numeric',
+    weekday: 'long',
+    month: 'long',
+    year: 'numeric',
+    hour: 'numeric',
+    minute: 'numeric',
+    second: 'numeric',
+    timeZoneName: 'long',
+    // 12 or 24 hours time
+    hour12: true
+};
+const completeDate = new Intl.DateTimeFormat('en-GB',completeFormat).format(actualDate);
+console.log({completeDate});
 // ----------------------------------------------------------------------------------------
 
 console.log('-----------------------------------------------------------------------------------------');

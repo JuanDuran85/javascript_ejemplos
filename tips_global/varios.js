@@ -110,3 +110,17 @@ console.log({closetThree});
 const [shirt, ...newClosetThree] = closetThree;
 console.log({newClosetThree});
 //-----------------------------------------------------------------------------------------
+
+console.log('-----------------------------------------------------------------------------------------');
+
+// ----------------------------------------------------------------------------------------
+// The Performance interface provides access to performance-related information for the current page. It's part of the High Resolution Time API, but is enhanced by the Performance Timeline API, the Navigation Timing API, the User Timing API, and the Resource Timing API.
+// ----------------------------------------------------------------------------------------
+console.log('The performance.now() method returns a DOMHighResTimeStamp, measured in milliseconds. ');
+const firstTime = performance.now();
+for (let index = 0; index < 1000; index++) {
+    console.log(index);  
+}
+const secondTime = performance.now();
+console.log(`Elapsed time: ${secondTime - firstTime}ms`);
+//-----------------------------------------------------------------------------------------
