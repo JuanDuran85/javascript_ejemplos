@@ -1,25 +1,28 @@
 /*
 
-Ejemplos, trucos y tips para trabajar con console en JavaScript
-    - console.time
-    - console.timeEnd
-    - console.group
-    - console.groupEnd
-    - console.log
-    - console.error
-    - console.warn
-    - console.info
-    - console.table
-    - console.clear
-    - console.trace
-    - console.dir
-    - console.dirxml
-    - console.profile
-    - console.profileEnd
-    - console.count
-    - console.assert
-    - console.countReset
-    - console.groupCollapsed
+    Ejemplos, trucos y tips para trabajar con console en JavaScript.
+    
+    The console object provides access to the browser's debugging console (e.g. the Web console in Firefox). The specifics of how it works varies from browser to browser, but there is a de facto set of features that are typically provided. 
+
+        - console.time
+        - console.timeEnd
+        - console.group
+        - console.groupEnd
+        - console.log
+        - console.error
+        - console.warn
+        - console.info
+        - console.table
+        - console.clear
+        - console.trace
+        - console.dir
+        - console.dirxml
+        - console.profile
+        - console.profileEnd
+        - console.count
+        - console.assert
+        - console.countReset
+        - console.groupCollapsed
 
 */
 

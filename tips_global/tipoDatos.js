@@ -354,7 +354,6 @@ console.log({isFalseValue});
 console.log(typeof isFalseValue);
 console.log({alsoFalseValue});
 console.log(typeof alsoFalseValue);
-
 //-----------------------------------------------------------------------------------------
 
 console.log('-----------------------------------------------------------------------------------------');
@@ -362,9 +361,24 @@ console.log('-------------------------------------------------------------------
 console.log('-----------------------------------------------------------------------------------------');
 
 // ----------------------------------------------------------------------------------------
-// 
+// Convertir un decimal a entero: Hay varias maneras de devolver la parte entera de un numero decimal pero tambien puedes usar el operador bitwise. Otra manera es usando el bitwise OR operador y adjuntando el 0.
+// El operador Bitwise solo operan sobre enteros por lo que covierten cualquier numero en un entero de 32 bits.
 // ----------------------------------------------------------------------------------------
+const numberOne = 146.764;
+const numberTwo = ~~numberOne;
+console.log({numberOne});
+console.log({numberTwo});
 
+const strNumber = "684.607";
+const onlyNumber = ~~strNumber;
+console.log({strNumber});
+console.log({onlyNumber});
+
+const numberConverter = 4732.794 | 0;
+console.log({numberConverter});
+
+const strNumberConverter = "67011.494" | 0;
+console.log({strNumberConverter});
 
 //-----------------------------------------------------------------------------------------
 

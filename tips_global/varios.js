@@ -56,6 +56,57 @@ for (const key in userExampleObject) {
 for (const values of Object.values(userExampleObject)) {
     console.log(values);
 } 
+//-----------------------------------------------------------------------------------------
 
+console.log('-----------------------------------------------------------------------------------------');
 
+// ----------------------------------------------------------------------------------------
+// Spread Operator: Expande un elemento iterable en elementos unicos. 
+// ----------------------------------------------------------------------------------------
+console.log("--Spread Operator--")
+console.log("Shallow cloning - Crear un copia de un objeto existente");
+const shirtOne = {
+    color: 'green',
+    size: 'M',
+};
+const shirtTwo = {
+    ...shirtOne,
+    color: 'white',
+};
+
+console.log({shirtOne});
+console.log({shirtTwo});
+//---------------------------------------------
+console.log("Add an element - Agregar un elemento a una coleccion de elementos");
+let closetOne = ['shirt', 'socks', 'shoes'];
+const sweater = "Sweater";
+closetOne = [...closetOne, sweater];
+console.log({sweater});
+console.log({closetOne});
+//-----------------------------------------------------------------------------------------
+
+console.log('-----------------------------------------------------------------------------------------');
+
+// ----------------------------------------------------------------------------------------
+// Rest Operator: Recopila todos los elementos restantes en una coleccion. 
+// ----------------------------------------------------------------------------------------
+console.log("--Rest Operator--")
+console.log("Collects multiple elements - Recopullar multiples elementos en un solo elemento");
+
+let closetTwo = ["shirt", "socks", "shoes"];
+const clothing = [ "jacket", "jeans", "dress"];
+console.log({closetTwo});
+console.log({clothing});
+
+const addToClosetTwo = (...clothings) => closetTwo = [...closetTwo, ...clothings];
+
+addToClosetTwo(...clothing);
+console.log({closetTwo});
+
+//---------------------------------------------
+console.log("Join elements - Separar elementos y unir los elementos restantes en una nueva coleccion");
+const closetThree = ["shirt", "socks", "shoes"];
+console.log({closetThree});
+const [shirt, ...newClosetThree] = closetThree;
+console.log({newClosetThree});
 //-----------------------------------------------------------------------------------------
