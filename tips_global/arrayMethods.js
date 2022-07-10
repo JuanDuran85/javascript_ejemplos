@@ -154,6 +154,11 @@ console.log("filter Method");
 const resultFilter = arrayGlobal.filter(element => element.length > 5);
 console.log(resultFilter);
 
+const elementosToDeleteWithFilter = ['C++','C#','Java','PHP','JS','Python'];
+console.log({elementosToDeleteWithFilter});
+const resultFilter2 = elementosToDeleteWithFilter.filter(( _ , index ) => index !== 3);
+console.log({resultFilter2});
+
 // ----------------------------------------------------------------------------------------
 console.log('-----------------------------------------------------------------------------------------');
 

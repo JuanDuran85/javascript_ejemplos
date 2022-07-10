@@ -116,3 +116,18 @@ const arregloConcatenadoDos = [...arregloNumerosUno, 6,2];
 console.log(arregloConcatenadoDos);
 
 // ----------------------------------------------------------------------------------------
+
+console.log('-----------------------------------------------------------------------------------------');
+
+// ----------------------------------------------------------------------------------------
+// Dos formas de eliminar elementos de un array en JS -  When you delete an array element, the array length is not affected. This holds even if you delete the last element of the array. When the delete operator removes an array element, that element is no longer in the array
+// ----------------------------------------------------------------------------------------
+// 1. usando delete
+console.log("Utilizando delete")
+const arrayElementosToDelete = ['a', 'b', 'c', 'd', 'e', 'f'];
+console.log({arrayElementosToDelete});
+delete arrayElementosToDelete[3];
+console.log({arrayElementosToDelete});
+
+
+// ----------------------------------------------------------------------------------------
