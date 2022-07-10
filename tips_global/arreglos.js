@@ -165,3 +165,48 @@ const stringToArrayWithJSONParse = '["J","a","v","a","S","c","r","i","p","t"]';
 console.log(JSON.parse(stringToArrayWithJSONParse));
 
 // ----------------------------------------------------------------------------------------
+
+console.log('-----------------------------------------------------------------------------------------');
+
+// ----------------------------------------------------------------------------------------
+// JS Arrays Destructuring
+// ----------------------------------------------------------------------------------------
+
+console.log("Assigning array items to variables");
+const [a, b, c] = [45,"texto",true];
+console.log({a,b,c});
+
+console.log("Skipping items");
+const [,x] = [45,"texto",true];
+console.log({x});
+
+console.log("Assigning the first nvalues, storing the rest together");
+const [y,z, ...rest] = [45,"texto",true,[1,2,3],{name: "Juan"}];
+console.log({y,z,rest});
+
+console.log("Swapping values");
+let w = true;
+let p = false;
+console.log({w,p});
+[w,p] = [p,w];
+console.log({w,p});
+
+// ----------------------------------------------------------------------------------------
+
+console.log('-----------------------------------------------------------------------------------------');
+
+// ----------------------------------------------------------------------------------------
+// Using map and flatMap to merge two arrays in one. -  The map method returns a new array with the results of calling a provided function on every element in the calling array. The flatMap method returns a new array with the concatenation of the results of calling a provided function on every element in the calling array.
+// ----------------------------------------------------------------------------------------
+const animals = ["🐱​","​🐶​","​🦊​","​🐺​","🦝"];
+const names = ["cat","dog","fox","wolf","raccoon"];
+// 1. map
+console.log("Using map:");
+const mapOnly = animals.map((animal, index) => [animal, names[index]]);
+console.log({mapOnly});
+
+// 2. flatMap
+console.log("Using flatMap:");
+const flatMapOnly = animals.flatMap((animal, index) => [animal, names[index]]);
+console.log({flatMapOnly});
+// ----------------------------------------------------------------------------------------

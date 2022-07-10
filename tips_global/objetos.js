@@ -156,7 +156,6 @@ console.log(objetoDos);
 const {x, y, ...newObj } = objetoTres;
 console.log(newObj)
 
-
 //-----------------------------------------------------------------------------------------
 
 console.log('-----------------------------------------------------------------------------------------');
@@ -194,4 +193,22 @@ const colour = carOne.colour;
 // Using object destructuring
 const { name: carName, colour: carColour } = carOne;
 console.log(carName, carColour);
+//-----------------------------------------------------------------------------------------
+
+console.log('-----------------------------------------------------------------------------------------');
+
+// ----------------------------------------------------------------------------------------
+// Spread Operator para eliminar props. Con el "three-dot-notation" creas un nuevo objeto.
+// ----------------------------------------------------------------------------------------
+
+const personrRandom = {
+    name: "Juan",
+    age: 23,
+    job: "Developer"
+};
+
+// usando la notacion "three-dot-notation" (...) se puede crear un nuevo objeto sin job por ejemplo
+const { job, ...newPerson } = personrRandom;
+console.log({newPerson, job, personrRandom});
+
 //-----------------------------------------------------------------------------------------
