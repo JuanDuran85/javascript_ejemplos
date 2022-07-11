@@ -61,7 +61,17 @@ console.log('-------------------------------------------------------------------
 // ----------------------------------------------------------------------------------------
 console.log(`Type of ${100}: ${typeof 100}`); // Type of 100: number
 console.log(`Type of ${String(100)}: ${typeof String(100)}`); // Type of 100: string
+// ----------------------------------------------------------------------------------------
 
+console.log('-----------------------------------------------------------------------------------------');
+
+// ----------------------------------------------------------------------------------------
+// Se puede convertir un dato tipo string solo con numeros al tipo number, utilizando el operador de suma '+' 
+// ----------------------------------------------------------------------------------------
+const quantity = +"10";
+const price = +"57.877";
+console.log(`Type of ${quantity}: ${typeof quantity}`); // Type of 10: number
+console.log(`Type of ${price}: ${typeof price}`); // Type of 57.877: number
 // ----------------------------------------------------------------------------------------
 
 console.log('-----------------------------------------------------------------------------------------');
@@ -228,6 +238,9 @@ for (const valor of valorAVerificar1) {
     valor ?? ejecutada(valor);
 }
 //-----------------------------------------------------------------------------------------
+
+console.log('-----------------------------------------------------------------------------------------');
+
 // ----------------------------------------------------------------------------------------
 // Hoy en dia se puede utilizar el operador || para verificar si la variable tiene un valor no permitido (false, null, undefined, 0, "", NaN) y asi mandar a ejecutar la funcion. Todo esto mientras no se niegue la variable en la comparacion.
 // ----------------------------------------------------------------------------------------
@@ -239,6 +252,23 @@ for (const valor of valorAVerificar1) {
     valor || ejecutada(valor);
 }
 //-----------------------------------------------------------------------------------------
+
+console.log('-----------------------------------------------------------------------------------------');
+
+// ----------------------------------------------------------------------------------------
+// Assigning default value: The OR '||' short circuit operator evaluates an expresion from left to right until it finds a truthy value else it returns the last operand value.
+// ----------------------------------------------------------------------------------------
+
+console.log("\n || operator \n");
+for (const valor of valorAVerificar1) {
+    console.log(valor);
+    const arrayInit = valor || [];
+    console.log({ arrayInit });
+}
+//-----------------------------------------------------------------------------------------
+
+console.log('-----------------------------------------------------------------------------------------');
+
 // ----------------------------------------------------------------------------------------
 // Hoy en dia se puede utilizar el operador && para verificar si la variable tiene un valor permitido (true) y asi mandar a ejecutar la funcion. Todo esto mientras no se niegue la variable en la comparacion.
 // ----------------------------------------------------------------------------------------
