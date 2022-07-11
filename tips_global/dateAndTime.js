@@ -135,6 +135,12 @@ const completeFormat = {
 };
 const completeDate = new Intl.DateTimeFormat('en-GB',completeFormat).format(actualDate);
 console.log({completeDate});
+
+const reduceDateStyleForm = new Intl.DateTimeFormat('en-US', {dateStyle: 'full'}).format(actualDate);
+console.log({reduceDateStyleForm});
+
+const reduceTimeStyleForm = new Intl.DateTimeFormat('en-US', {timeStyle: 'medium'}).format(actualDate);
+console.log({reduceTimeStyleForm});
 // ----------------------------------------------------------------------------------------
 
 console.log('-----------------------------------------------------------------------------------------');
