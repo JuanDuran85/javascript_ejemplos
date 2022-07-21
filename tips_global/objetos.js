@@ -212,3 +212,27 @@ const { job, ...newPerson } = personrRandom;
 console.log({newPerson, job, personrRandom});
 
 //-----------------------------------------------------------------------------------------
+
+console.log('-----------------------------------------------------------------------------------------');
+
+// ----------------------------------------------------------------------------------------
+// Getters y Setters en Objetos JS: Las propiedades get y set permiten acceder a un objeto de forma controlada, transformando los valores a retornar o llevar un historial de accesos, por ejemplo.
+// ----------------------------------------------------------------------------------------
+const userOne = {
+    name: "Juan",
+    age: 23,
+    job: "Developer",
+    get fullName(){
+        return `${this.name} ${this.age}`;
+    },
+    set newName(newValue){
+        this.name = newValue;
+    }
+};
+
+console.log({userOne});
+console.log(userOne.fullName);
+userOne.newName = "Pedro";
+console.log({userOne});
+console.log(userOne.fullName);
+//-----------------------------------------------------------------------------------------
