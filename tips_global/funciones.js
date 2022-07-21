@@ -85,3 +85,31 @@ function eatFood(...fruits) {
 eatFood("Apple", "Orange");
 //-----------------------------------------------------------------------------------------
 
+console.log('-----------------------------------------------------------------------------------------');
+
+// ----------------------------------------------------------------------------------------
+// Usando funciones del tipo flecha como "Helpers" para retornar un valor en especifico con reduce
+// ----------------------------------------------------------------------------------------
+
+const getAccByPropHelper = (prop, arrayTotal = [], ) => arrayTotal.reduce((acc,item) => acc + item[prop], 0);
+
+const imputacionesFacturas = [
+    {id: '233322', cantidad: 4},
+    {id: '233323', cantidad: 6},
+    {id: '233324', cantidad: 2},
+    {id: '233325', cantidad: 9}
+];
+
+const factura = {
+    id: '565433',
+    productos: [
+        {descripcion: 'Producto 1', base: 343},
+        {descripcion: 'Producto 2', base: 67},
+    ]
+};
+
+const sumatoriaImputaciones = getAccByPropHelper('cantidad',imputacionesFacturas);
+console.log({sumatoriaImputaciones});
+const sumatoriaProductos = getAccByPropHelper('base',factura.productos);
+console.log({sumatoriaProductos});
+//-----------------------------------------------------------------------------------------
