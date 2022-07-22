@@ -113,3 +113,23 @@ console.log({sumatoriaImputaciones});
 const sumatoriaProductos = getAccByPropHelper('base',factura.productos);
 console.log({sumatoriaProductos});
 //-----------------------------------------------------------------------------------------
+
+console.log('-----------------------------------------------------------------------------------------');
+
+// ----------------------------------------------------------------------------------------
+// Usando Closures: Una funcion closure envuelve (close over) una funcion exterior, manteniendo el acceso a su ambito, aun ejecutandose desde otro contexto. Por lo que se puede retornar la referencia de una funcion interna y utilizarla en otro contexto.
+// ----------------------------------------------------------------------------------------
+
+function exteriorFunction(nombre) {
+    const nombreUser = nombre;
+
+    function internaFunction(){
+        console.log(`Hola ${nombreUser}`);
+    }
+
+    return internaFunction;
+}
+
+const closureFunctions = exteriorFunction("Maria");
+closureFunctions();
+//-----------------------------------------------------------------------------------------
