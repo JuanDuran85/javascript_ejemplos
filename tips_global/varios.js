@@ -129,10 +129,19 @@ console.log('-------------------------------------------------------------------
 
 // ----------------------------------------------------------------------------------------
 // Sumatoria de numeros: Utilizando funciones con parametros rest para encontrar el total de varios numeros pasados como argumentos.
+// Los parametros rest (...) permiten a una funcion tomar un numero cualquiera de parametros, que seran convertidos en un Array.
 // ----------------------------------------------------------------------------------------
 console.log('Sumatoria de numeros con funciones con parametros rest');
 const sumaTotal = (...numbers) => numbers.reduce((total,actual) => total + actual);
 
 const resultSumaTotal = sumaTotal(1,2,3,4,5,6,7,8,9,10);
 console.log({resultSumaTotal});
+//-----------------------------------------------------------------------------------------
+
+console.log('-----------------------------------------------------------------------------------------');
+
+// ----------------------------------------------------------------------------------------
+// 
+// ----------------------------------------------------------------------------------------
+
 //-----------------------------------------------------------------------------------------

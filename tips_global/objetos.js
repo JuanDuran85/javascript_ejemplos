@@ -16,9 +16,7 @@ const objetoUno = {
 console.log(Object.hasOwn(objetoUno,'id')); // retorna true, porque el objeto tiene la propiedad id
 console.log(Object.hasOwn(objetoUno,'name')); // retorna true, porque el objeto tiene la propiedad name
 console.log(Object.hasOwn(objetoUno,'toString')); // retorna false, porque el objeto no tiene la propiedad toString
-
 // ----------------------------------------------------------------------------------------
-
 
 console.log('-----------------------------------------------------------------------------------------');
 
@@ -34,9 +32,7 @@ const userObjeto = {
 
 const entriesResult = Object.entries(userObjeto);
 console.log(entriesResult);
-
 //-----------------------------------------------------------------------------------------
-
 
 console.log('-----------------------------------------------------------------------------------------');
 
@@ -45,8 +41,6 @@ console.log('-------------------------------------------------------------------
 // ----------------------------------------------------------------------------------------
 const keysResult = Object.keys(userObjeto);
 console.log(keysResult);
-
-
 //-----------------------------------------------------------------------------------------
 
 console.log('-----------------------------------------------------------------------------------------');
@@ -56,7 +50,6 @@ console.log('-------------------------------------------------------------------
 // ----------------------------------------------------------------------------------------
 const valuesResult = Object.values(userObjeto);
 console.log(valuesResult);
-
 //-----------------------------------------------------------------------------------------
 
 console.log('-----------------------------------------------------------------------------------------');
@@ -99,7 +92,6 @@ function invitarEmpleados(saludo1, saludo2){
 
 invitarEmpleados.call(empleadoUno, 'Hola','Saludos...');
 invitarEmpleados.call(empleadoDos, 'Hola','Saludos');
-
 //-----------------------------------------------------------------------------------------
 
 console.log('-----------------------------------------------------------------------------------------');
@@ -110,7 +102,6 @@ console.log('-------------------------------------------------------------------
 
 invitarEmpleados.apply(empleadoUno, ['Hola','Saludos...']);
 invitarEmpleados.apply(empleadoDos, ['Hola','Saludos']);
-
 //-----------------------------------------------------------------------------------------
 
 console.log('-----------------------------------------------------------------------------------------');
@@ -124,7 +115,6 @@ const invitarEmpleadoDos = invitarEmpleados.bind(empleadoDos);
 
 invitarEmpleadoUno('Hola','Saludos...')
 invitarEmpleadoDos('Hola','Saludos')
-
 //-----------------------------------------------------------------------------------------
 
 console.log('-----------------------------------------------------------------------------------------');
@@ -155,7 +145,6 @@ console.log(objetoDos);
 // Opcion 2 - Corta - :
 const {x, y, ...newObj } = objetoTres;
 console.log(newObj)
-
 //-----------------------------------------------------------------------------------------
 
 console.log('-----------------------------------------------------------------------------------------');
@@ -173,7 +162,6 @@ const school = {
 const { nombre, edad } = school;
 console.log(nombre, edad);
 //-----------------------------------------------------------------------------------------
-
 
 console.log('-----------------------------------------------------------------------------------------');
 
@@ -210,7 +198,6 @@ const personrRandom = {
 // usando la notacion "three-dot-notation" (...) se puede crear un nuevo objeto sin job por ejemplo
 const { job, ...newPerson } = personrRandom;
 console.log({newPerson, job, personrRandom});
-
 //-----------------------------------------------------------------------------------------
 
 console.log('-----------------------------------------------------------------------------------------');
@@ -235,4 +222,72 @@ console.log(userOne.fullName);
 userOne.newName = "Pedro";
 console.log({userOne});
 console.log(userOne.fullName);
+//-----------------------------------------------------------------------------------------
+
+console.log('-----------------------------------------------------------------------------------------');
+
+// ----------------------------------------------------------------------------------------
+// Se pueden utilizar los objetos como Switches de opciones para evitar el uso de if-else o switch, en conjunto con el operando OR para mostrar un valor por defecto, simplificando el codigo por uno mas legible y ordenado.
+// ----------------------------------------------------------------------------------------
+console.log('Usando objetos como contenedores de opciones');
+const funtionalSwitch = {
+    "case-1": "This is case 1",
+    "case-2": "This one case 2 condition",
+    "case-3": "This is case 3",
+    "case-4": "This is one more case",
+};
+
+const caseOpcion = "case-4";
+const finalResult = funtionalSwitch[caseOpcion] || "No se encontro la opcion";
+console.log({finalResult});
+//-----------------------------------------------------------------------------------------
+
+console.log('-----------------------------------------------------------------------------------------');
+
+// ----------------------------------------------------------------------------------------
+// Para comprobar que una propiedad en un objeto existe, se puede utilizar una expresion logica preguntando ppor cada propiedad del objeto, y si alguna de ellas es verdadera, se retorna true. O se puede usar el encadenamiento opcional (?.) para comprobar si una propiedad existe.
+// El encandenamiento opcional (?.) es una forma segura de acceder a las propiedades de los objetos anidados, retornando undefined en el caso de no existir.
+// ----------------------------------------------------------------------------------------
+console.log('Encadenamiento condicional');
+const userFinalObject = {
+    name: "Juan",
+    age: 23,
+    job: "Developer",
+    location: {
+        city: "Bogota",
+    }
+};
+
+
+try {
+    console.log(userFinalObject.location.street.name);
+} catch (error) {
+    console.error("ERROR: Al intentar preguntar por una propiedad que no existe, se produce un error");
+}
+
+// una opcion podria ser preguntar por cada propiedad de forma logica en un condicional
+console.log(userFinalObject.location && userFinalObject.location.street && userFinalObject.location.street.name);
+
+// o se puede usar el encadenamiento opcional (?.) para comprobar si una propiedad existe
+console.log(userFinalObject.location?.street?.name);
+//-----------------------------------------------------------------------------------------
+
+console.log('-----------------------------------------------------------------------------------------');
+
+// ----------------------------------------------------------------------------------------
+// The Javascript delete operator removes a property from an object; if no more references to the same property are held, it is evnetually released automatically. now, you can use the "in" operator to returns true if the property exists in the object.
+// ----------------------------------------------------------------------------------------
+console.log('delete operator');
+const adminUser = {
+    name: "Juan",
+    age: 23,
+    job: "Developer",
+};
+console.log({adminUser});
+console.log(`Existe la propiedad age en el objeto: ${"age" in adminUser}`);
+console.log(`Propiedad a borrar --> age, cuyo valor es: ${adminUser.age}`);
+delete adminUser.age;
+console.log(`Propiedad borrada --> age, cuyo nuevo valor es: ${adminUser.age}`);
+console.log(`Existe la propiedad age en el objeto: ${"age" in adminUser}`);
+console.log({adminUser});
 //-----------------------------------------------------------------------------------------

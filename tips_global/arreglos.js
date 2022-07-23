@@ -62,7 +62,7 @@ console.log();
 console.log('-----------------------------------------------------------------------------------------');
 
 // ----------------------------------------------------------------------------------------
-// El metodo includes permite saber si un elemento existe en un arreglo, en convinacion con un condicional if, podemos hacer una comparacion de un elemento en un arreglo y ahorrar condiciones repetidas.
+// El metodo includes permite saber si un elemento existe en un arreglo, en convinacion con un condicional if, podemos hacer una comparacion de un elemento en un arreglo y ahorrar condiciones repetidas. Incluso crear funciones que solo se encarguen de buscar un elemento en un arreglo.
 // ----------------------------------------------------------------------------------------
 
 const arregloStringElementos = ['Casa', 1, "Compra", "cosas"]
@@ -70,7 +70,18 @@ if (arregloStringElementos.includes('Casa')) {
   console.log('El elemento existe');
 }
 
+const findAnimal = "Perro";
 
+const validateAnimal = (animalName) => {
+  const animalsReference = ["Perro", "Gato", "Caballo", "Cabra"];
+  return animalsReference.includes(animalName);
+};
+
+if(validateAnimal(findAnimal)) {
+  console.log(`El animal ${findAnimal} existe`);
+} else {
+  console.log(`El animal ${findAnimal} no existe`);
+}
 //-----------------------------------------------------------------------------------------
 
 console.log('-----------------------------------------------------------------------------------------');

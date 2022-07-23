@@ -58,6 +58,10 @@ console.log("chartAt method");
 const textoToChartAt = "Aplicando el metodo chartAt";
 console.log(`Texto original: ${textoToChartAt}`);
 console.log(`Aplicando chartAt(4): ${textoToChartAt.charAt(4)}`);  // c
+
+// o se puede aplicar un equivalente mas corto y rapido, ya que un string es una cadena de caracteres (array)
+console.log(`Aplicando la forma rapida y corta: ${textoToChartAt[4]}`); 
+
 //-----------------------------------------------------------------------------------
 console.log("----------------------------------------------------------------------");
 
@@ -224,6 +228,10 @@ string2 = string2.normalize('NFD');
 console.log(string1 === string2); // true
 console.log(string1.length);      // 2
 console.log(string2.length);      // 2
+
+const string3 = 'ÁÉÍÓÚáéíóúâêîôûàèìòùÀÈÌÒÙÇç/.,|@·¬·~;:_-+*&^%$#@!¡¿?¿¡!12345';
+const parseString3 = string3.normalize('NFD').replace(/([\u0300-\u036f]|[^0-9a-zA-Z])/g,'');
+console.log({parseString3});
 //-----------------------------------------------------------------------------------
 console.log("----------------------------------------------------------------------");
 
