@@ -291,3 +291,28 @@ console.log(`Propiedad borrada --> age, cuyo nuevo valor es: ${adminUser.age}`);
 console.log(`Existe la propiedad age en el objeto: ${"age" in adminUser}`);
 console.log({adminUser});
 //-----------------------------------------------------------------------------------------
+
+console.log('-----------------------------------------------------------------------------------------');
+
+// ----------------------------------------------------------------------------------------
+// Check if a key exists in an object with the in operator or the has method or hasOwnproperty.
+// ----------------------------------------------------------------------------------------
+console.log('Method 1 - In operator');
+const product = {
+    name: "PC",
+    price: 1040,
+}
+console.log({product});
+console.log(`name es una propiedad del objeto: ${"name" in product}`);
+console.log(`price es una propiedad del objeto: ${"price" in product}`);
+console.log(`year es una propiedad del objeto: ${"year" in product}`);
+
+console.log("Method 2 - has method");
+console.log(`name existe en producto: ${Reflect.has(product, "name")}`);
+console.log(`year existe en producto: ${Reflect.has(product, "year")}`);
+
+console.log("Method 3 - hasOwnProperty method");
+console.log(`name existe en producto: ${product.hasOwnProperty("name")}`);
+console.log(`year existe en producto: ${product.hasOwnProperty("year")}`);
+
+//-----------------------------------------------------------------------------------------

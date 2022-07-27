@@ -463,14 +463,17 @@ console.log(
 );
 
 // ----------------------------------------------------------------------------------------
-// The flat() method creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.
+// The flat() method creates a new array with all sub-array elements concatenated into it recursively up to the specified depth. Calling flat on an array with the argument Infinity leads to the array being flattened until there is only one layer left.
 // ----------------------------------------------------------------------------------------
 console.log("flat Method");
-const arrayToFlat = ["a", 1, [3, "b"], ["x", "y", [2, 4, 5, "c"]]];
-let resultArrayToFlat = arrayToFlat.flat();
-console.log(resultArrayToFlat);
-resultArrayToFlat = arrayToFlat.flat(2);
-console.log(resultArrayToFlat);
+const arrayToFlat = ["a", 1, [3, "b"], ["x", "y",["casa"],[2, ["nuevo",3],4, 5, "c"]]];
+const resultArrayToFlatOne = arrayToFlat.flat();
+console.log({resultArrayToFlatOne});
+const resultArrayToFlatTwo = arrayToFlat.flat(2);
+console.log({resultArrayToFlatTwo});
+const flattenFunction = (...args) => args.flat(Infinity);
+const resultWithFlatInfinity = flattenFunction(arrayToFlat)
+console.log({resultWithFlatInfinity});
 
 // ----------------------------------------------------------------------------------------
 console.log(

@@ -149,3 +149,56 @@ console.log({stringNumbers});
 const number = stringNumbers.map(Number);
 console.log({number});
 //-----------------------------------------------------------------------------------------
+
+console.log('-----------------------------------------------------------------------------------------');
+
+// ----------------------------------------------------------------------------------------
+// You can use filter and Boolean to remove falsey values from an array. Array-filter can take the Boolean constructor as an argument.
+// ----------------------------------------------------------------------------------------
+console.log('Removing falsey values from an array');
+const arrayWithAnyElements = [12,"",null,"casa",undefined,0,NaN,false,true,[],{},0,[0],{key: 0}];
+console.log({arrayWithAnyElements});
+const resultFilterArray = arrayWithAnyElements.filter(Boolean);
+console.log({resultFilterArray});
+//-----------------------------------------------------------------------------------------
+
+console.log('-----------------------------------------------------------------------------------------');
+
+// ----------------------------------------------------------------------------------------
+// You can use Math library with the max and min methods and spread operator to find the maximum and minimum values in an array.
+// ----------------------------------------------------------------------------------------
+console.log('Finding the maximum and minimum values in an array');
+const arrayToFindMaxAndMin = [4,7,4,21,8,9,5,1,9,-6,-4,3,23];
+console.log({arrayToFindMaxAndMin});
+console.log(Math.max(...arrayToFindMaxAndMin));
+console.log(Math.min(...arrayToFindMaxAndMin));
+//-----------------------------------------------------------------------------------------
+
+console.log('-----------------------------------------------------------------------------------------');
+
+// ----------------------------------------------------------------------------------------
+// Filtering and Sorting a list of string using filter, lastIndexOf and sort
+// ----------------------------------------------------------------------------------------
+console.log("Filtering and Sorting a list of string");
+const arrayWithString = [
+  "casa",
+  "carro",
+  "perro",
+  "gato",
+  "zapato",
+  "computador",
+  "silla",
+  "mesa",
+  "monitor",
+  "algebra",
+  "geografia",
+];
+const filteredAndSortedKeywords = arrayWithString
+  .filter(
+    (nameFronList, index) => arrayWithString.lastIndexOf(nameFronList) === index
+  )
+  .sort((a, b) => (a < b ? -1 : 1));
+  console.log({filteredAndSortedKeywords});
+
+
+//-----------------------------------------------------------------------------------------

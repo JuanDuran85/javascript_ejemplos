@@ -133,3 +133,15 @@ function exteriorFunction(nombre) {
 const closureFunctions = exteriorFunction("Maria");
 closureFunctions();
 //-----------------------------------------------------------------------------------------
+
+console.log('-----------------------------------------------------------------------------------------');
+
+// ----------------------------------------------------------------------------------------
+// Para saber cuantos parametros recibe una funcion, se puede utilizar el length, pero si la funcion posee parametros del tipo rest, el length no lo totaliza.
+// ----------------------------------------------------------------------------------------
+const functionBasic = (param1, param2, param3) => param1 + param2 + param3;
+console.log(`La cantidad de parametros que recibe la funcion es: ${functionBasic.length}`);
+
+const functionWithRest = (param1, param2, ...rest) => param1 + param2 + rest.reduce((acc,item) => acc + item, 0);
+console.log(`La cantidad de parametros que recibe la funcion es: ${functionWithRest.length}`);
+//-----------------------------------------------------------------------------------------
