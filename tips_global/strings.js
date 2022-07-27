@@ -36,8 +36,23 @@ console.log('-------------------------------------------------------------------
 
 
 // ----------------------------------------------------------------------------------------
-// 
+// Realizando una busca en string de un caracter o palabra en particuar con 6 diferentes metodos
 // ----------------------------------------------------------------------------------------
+console.log("Buscando en un string alguna palabra o caracter en particular");
+const mensajeCompleto = "El futuro mostrará los resultados y juzgará a cada uno de acuerdo a sus logros.";
+console.log({mensajeCompleto});
+// 1. indexOf
+console.log(mensajeCompleto.indexOf("resultados")); // retorna el indice de la palabra. Si no existe, entonces retornara -1
+// 2. lastIndexOf
+console.log(mensajeCompleto.lastIndexOf("o")); // retorna el indice de la ultima coincidencia. Si no existe, entonces retornara -1
+// 3. startsWith
+console.log(mensajeCompleto.startsWith("El")); // retorna true o false, dependiendo si la cadena empieza con la palabra o no
+// 4. endsWith
+console.log(mensajeCompleto.endsWith(".")); // retorna true o false, dependiendo si la cadena termina con el caracter o no
+// 5. includes
+console.log(mensajeCompleto.includes("resultados")); // retorna true o false, dependiendo si la cadena contiene la palabra o no
+// 6. match: retorna un array con todas las coincidencias
+console.log(mensajeCompleto.match(/a/gi)); // retorna un array con todas las coincidencias
 
 //-----------------------------------------------------------------------------------------
 
