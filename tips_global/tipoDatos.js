@@ -439,3 +439,64 @@ console.log({numeroMillones});
 console.log('-----------------------------------------------------------------------------------------');
 //-----------------------------------------------------------------------------------------
 console.log('-----------------------------------------------------------------------------------------');
+
+// ----------------------------------------------------------------------------------------
+// Logical Assignment Operators: ||= , &&= and ??=
+// ----------------------------------------------------------------------------------------
+console.log("Operator ||= \n");
+// In tje example. the ||= operator will check if the songsCount is false (0), if false, the songsCount will be set to the new value indicated.
+const myListOfMusic = {
+    songsCount: 0,
+    author: null,
+    year: undefined,
+    format: false,
+    songs: [],
+    awards: 12,
+};
+myListOfMusic.songsCount ||= 100;
+myListOfMusic.author ||= "Juan";
+myListOfMusic.year ||= 2020;
+myListOfMusic.format ||= "MP3";
+myListOfMusic.awards ||= 30;
+console.log({myListOfMusic});
+
+console.log("Operator ??= \n");
+// In the example, the ??= operator will check if the lastname is null or undefined... if true, the lastname will not be set.
+const userDetails = {
+    firstName: "Juan",
+    age: 20,
+    city: null,
+    country: undefined,
+    type: false,
+    permissions: 0,
+};
+userDetails.lastname ??= "Perez";
+userDetails.firstName ??= "Pedro";
+userDetails.age ??= 30;
+userDetails.city ??= "Caracas";
+userDetails.country ??= "Venezuela";
+userDetails.type ??= "Admin";
+userDetails.permissions ??= 10;
+console.log({userDetails});
+
+console.log("Operator &&= \n");
+// In the example, the &&= operator will check if the filesCount is true, if true, the filesCount will be set to the new value indicated.
+const myFiles = {
+    filesCount: 100,
+    files: [],
+    url: null,
+    path: "No asignado",
+    os: undefined,
+    size: false,
+};
+myFiles.filesCount &&= 200;
+myFiles.url &&= "https://www.js.com";
+myFiles.path &&= "C:\\Users\\Pedro\\Desktop\\";
+myFiles.os &&= "Linux";
+myFiles.size &&= "2GB";
+console.log({myFiles});
+//-----------------------------------------------------------------------------------------
+
+console.log('-----------------------------------------------------------------------------------------');
+//-----------------------------------------------------------------------------------------
+console.log('-----------------------------------------------------------------------------------------');
