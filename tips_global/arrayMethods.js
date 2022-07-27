@@ -241,11 +241,19 @@ console.log(
 );
 
 // ----------------------------------------------------------------------------------------
-// El método some() comprueba si al menos un elemento del array cumple con la condición implementada por la función proporcionada.
+// El método some() comprueba si al menos un elemento del array cumple con la condición implementada por la función proporcionada. Por lo que se puede usar para comprobar si existe alguna ocurrencia de un elemento en el array.
 // ----------------------------------------------------------------------------------------
 console.log("Some Method");
 const resultSome = arrayGlobal.some((element) => element.length > 4);
 console.log(resultSome);
+
+const userInSystem = [
+  {name: "Juan",isActive: false},
+  {name: "Pedro",isActive: false},
+  {name: "Maria",isActive: true},
+];
+const hasActiveUsers = userInSystem.some((user) => user.isActive);
+console.log({hasActiveUsers});
 
 // ----------------------------------------------------------------------------------------
 console.log(

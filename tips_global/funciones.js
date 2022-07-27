@@ -145,3 +145,14 @@ console.log(`La cantidad de parametros que recibe la funcion es: ${functionBasic
 const functionWithRest = (param1, param2, ...rest) => param1 + param2 + rest.reduce((acc,item) => acc + item, 0);
 console.log(`La cantidad de parametros que recibe la funcion es: ${functionWithRest.length}`);
 //-----------------------------------------------------------------------------------------
+
+console.log('-----------------------------------------------------------------------------------------');
+
+// ----------------------------------------------------------------------------------------
+// En las funciones, como en la de tipo flecha, podemos pasar los argumentos como un objeto, lo cual, permite un codigo mas descriptivo.
+// ----------------------------------------------------------------------------------------
+const createUserFinal = ({userName, isAdmin, mail}) => console.log(`Usuario creado con: ${userName} ${isAdmin} ${mail}`);
+
+createUserFinal({userName: "Maria", isAdmin: true, mail: "maria@correo.com"});
+
+//-----------------------------------------------------------------------------------------
