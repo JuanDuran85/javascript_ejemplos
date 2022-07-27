@@ -516,7 +516,7 @@ const resultFinal = Number(numeroFinal.join(""));
 console.log({resultFinal});
 console.log(typeof resultFinal);
 
-// forma corta con el operador spread
+// forma corta
 const resultNumberShort = numero / 10 | 0;
 console.log({resultNumberShort});
 console.log(typeof resultNumberShort);

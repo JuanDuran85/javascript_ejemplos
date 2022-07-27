@@ -293,6 +293,10 @@ console.log(`Texto original: ${textToReplace}`);
 console.log(`Texto a remplazar 'JS': ${textToReplace.replace("JS","JavaSript")}`);
 const regExpToReplace = /metodo/gi;
 console.log(`Texto a remplazar 'metodo': ${textToReplace.replace(regExpToReplace, "Método")}`);
+// You can also use replace method in a function to change the string.
+const hideCardNumber = (numberOfCard) => numberOfCard.replace(/\b(?:\d{4}[ -]?){3}(?=\d{4}\b)/gm,"#### #### #### ");
+const resultHideNumberCard = hideCardNumber("Visa 1234 5678 9012 3456");
+console.log(`Número de tarjeta: ${resultHideNumberCard}`);
 //-----------------------------------------------------------------------------------
 console.log("----------------------------------------------------------------------");
 

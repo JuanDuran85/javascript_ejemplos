@@ -320,7 +320,7 @@ const arrayToSortThree = [
 ];
 resultSort = arrayToSortThree.sort();
 console.log(resultSort);
-resultSort = arrayToSortTwo.sort((a, b) => a - b);
+resultSort = arrayToSortTwo.sort((a, b) => a - b); // sort ascending order. if yo use b - a, it will sort descending order.
 console.log(resultSort);
 const arrayWithObjectToSort = [
   { name: "Fernando", age: 20 },

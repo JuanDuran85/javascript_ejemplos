@@ -202,6 +202,11 @@ console.log({w,p});
 [w,p] = [p,w];
 console.log({w,p});
 
+console.log("Using positional arguments to assign values");
+const countries = ["Venezuela","Chile","Colombia","Peru","Brasil"];
+const { 0: ven, 3: per } = countries;
+console.log({ven,per});
+
 // ----------------------------------------------------------------------------------------
 
 console.log('-----------------------------------------------------------------------------------------');

@@ -88,7 +88,7 @@ console.log({closetOne});
 console.log('-----------------------------------------------------------------------------------------');
 
 // ----------------------------------------------------------------------------------------
-// Rest Operator: Recopila todos los elementos restantes en una coleccion. 
+// Rest Operator: Recopila todos los elementos restantes en una coleccion. Tambien se puede decir que colapsa todos los argumentos restantes de una funcion dentro de una coleccion.
 // ----------------------------------------------------------------------------------------
 console.log("--Rest Operator--")
 console.log("Collects multiple elements - Recopullar multiples elementos en un solo elemento");

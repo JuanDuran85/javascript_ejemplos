@@ -73,7 +73,7 @@ console.log(capitalizeFirstLetter("ejemplo de string a capitalizar en la primera
 console.log('-----------------------------------------------------------------------------------------');
 
 // ----------------------------------------------------------------------------------------
-// Using spread operator in the argument of a function
+// Using rest operator in the argument of a function. When using rest arguments, you are collapsing all remaining arguments of a function into one array. Rest parameters have to be at the last argument. This is because it collects all remaining/excess arguments into an array.
 // ----------------------------------------------------------------------------------------
 
 function eatFood(...fruits) {
