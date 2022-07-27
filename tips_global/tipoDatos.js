@@ -430,10 +430,13 @@ console.log('-------------------------------------------------------------------
 console.log('-----------------------------------------------------------------------------------------');
 
 // ----------------------------------------------------------------------------------------
-// Separador numerico: Se puede utilizar el simbolo "_" como separador numerico, lo que facilita contar el numero de ceros en una cifra cualquiera.
+// Separador numerico: Se puede utilizar el simbolo "_" como separador numerico, lo que facilita contar el numero de ceros en una cifra cualquiera, agrupando por miles. Pero imprimiendo el numero correctamente.
+// Igualmente se puede usar el separador numerico "_" para agrupar numeros enteros hexadecimales por byte, guardando el numero hexadecimal(base 16) como decimal(base 10).
 // ----------------------------------------------------------------------------------------
 const numeroMillones = 100_000_000;
 console.log({numeroMillones});
+const hexadecimalNumber = 0x0A_0A;
+console.log({hexadecimalNumber});
 //-----------------------------------------------------------------------------------------
 
 console.log('-----------------------------------------------------------------------------------------');
