@@ -141,7 +141,11 @@ console.log({resultSumaTotal});
 console.log('-----------------------------------------------------------------------------------------');
 
 // ----------------------------------------------------------------------------------------
-// 
+// You can use map and Number to convert a list of strings to numbers. Array-map can take the Number constructor as an argument.
 // ----------------------------------------------------------------------------------------
-
+console.log('Converting a list of strings to numbers');
+const stringNumbers = ['12','45','1','9.56','0.1','xyz','-3','103045'];
+console.log({stringNumbers});
+const number = stringNumbers.map(Number);
+console.log({number});
 //-----------------------------------------------------------------------------------------

@@ -111,8 +111,11 @@ console.log(
 // ----------------------------------------------------------------------------------------
 console.log("Slice Method");
 const resultSlice = arrayGlobal.slice(1, 3);
-console.log(resultSlice);
-
+console.log({resultSlice});
+const arrayToSlice = [4,2,65,3,1,6,9];
+console.log({arrayToSlice});
+const resultSliceLastTerm = arrayToSlice.slice(-1);
+console.log({resultSliceLastTerm});
 // ----------------------------------------------------------------------------------------
 console.log(
   "-----------------------------------------------------------------------------------------"
