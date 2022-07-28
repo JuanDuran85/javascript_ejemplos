@@ -226,3 +226,70 @@ console.log("Using flatMap:");
 const flatMapOnly = animals.flatMap((animal, index) => [animal, names[index]]);
 console.log({flatMapOnly});
 // ----------------------------------------------------------------------------------------
+
+console.log('-----------------------------------------------------------------------------------------');
+
+// ----------------------------------------------------------------------------------------
+// You can use the math library to find a get a random item from an array.
+// ----------------------------------------------------------------------------------------
+console.log("Random item from array with Math Library");
+const arrayToFindRandomItem = ["Python","JavaScript","C++","C#","Java","PHP","Ruby"];
+console.log({arrayToFindRandomItem});
+const randomItemFound = arrayToFindRandomItem[Math.floor(Math.random() * arrayToFindRandomItem.length)];
+console.log({randomItemFound});
+// ----------------------------------------------------------------------------------------
+
+console.log('-----------------------------------------------------------------------------------------');
+
+// ----------------------------------------------------------------------------------------
+// You can use filter methods to find items in an array, and length to count the number of items found.
+// ----------------------------------------------------------------------------------------
+console.log("Finding items in array with filter and count");
+const arregloNumerosTwo = [1,1,3,4,1,5,5,7,1,4,3,5,1,9,4,3,2,1,5];
+const countTotal = (numToFind) => arregloNumerosTwo.filter(item => item === numToFind).length;
+console.log(countTotal(7));
+// ----------------------------------------------------------------------------------------
+
+console.log('-----------------------------------------------------------------------------------------');
+
+// ----------------------------------------------------------------------------------------
+// You can use reduce methods to find the sum of a specific imtem in an array and create an object.
+// ----------------------------------------------------------------------------------------
+console.log("Using reduce to sum an array");
+const dataToTransformOne = ["casa", "carro", "perro", "carro", "perro"];
+const dataToTransformTwo = ["casa", "carro", "perro", "carro", "perro"];
+const dataToTransform = [...dataToTransformOne, ...dataToTransformTwo];
+console.log({dataToTransform});
+const result = dataToTransform.reduce(
+  (map, word) => ({ ...map, [word]: (map[word] || 0) + 1 }),
+  {}
+);
+console.log({ result });
+// ----------------------------------------------------------------------------------------
+
+console.log('-----------------------------------------------------------------------------------------');
+
+// ----------------------------------------------------------------------------------------
+// Using reduce and filter into a function to count the number of times an item appears in an array
+// ----------------------------------------------------------------------------------------
+console.log("Using reduce and filter into a function");
+
+const countItemFromArray = (arrayIn, element) =>
+  arrayIn.reduce(
+    (count, subArray) =>
+      subArray.filter((value) => value === element).length + count,
+    0
+  );
+const dataFinal = [
+  ["casa", "carro", "perro"],
+  ["carro", "perro", "pc"],
+  ["casa", "gato"],
+  ["carro", "perro", "pc"],
+];
+console.log({dataFinal});
+console.log(`La cuenta para el elemento: carro es: ${countItemFromArray(dataFinal, "carro")}`);
+
+
+
+
+// ----------------------------------------------------------------------------------------

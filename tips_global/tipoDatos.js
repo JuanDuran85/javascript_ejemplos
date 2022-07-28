@@ -527,10 +527,17 @@ console.log('-------------------------------------------------------------------
 console.log('-----------------------------------------------------------------------------------------');
 
 // ----------------------------------------------------------------------------------------
-// 
+// The stringify method takes two optional parameters: a replacer function, which you can use to filter the JSON that is displayed, and a space value. The space value takes an integer for the number of spaces you want or a string (such as '\t' to insert tabs), and it can make it a lot easier to read fetched JSON data.
 // ----------------------------------------------------------------------------------------
-console.log("");
-
+console.log("Format JSON code");
+const objectToJson = {
+    name: "Juan",
+    age: 20,
+    city: "Caracas",
+    country: "Venezuela",
+    type: "Admin",
+}
+console.log(JSON.stringify(objectToJson, null, '\t'));
 //-----------------------------------------------------------------------------------------
 
 console.log('-----------------------------------------------------------------------------------------');

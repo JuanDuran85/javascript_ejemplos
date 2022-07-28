@@ -329,6 +329,28 @@ console.log({usuarioTwo});
 const propiedad = 'nombreTwo'; // es el identificador de la propiedad a que quiero acceder
 const { [propiedad]: valor } = usuarioTwo;
 console.log({valor}); // valor es la variable que contendra el valor de la propiedad
+//-----------------------------------------------------------------------------------------
+
+console.log('-----------------------------------------------------------------------------------------');
+
+// ----------------------------------------------------------------------------------------
+// Deep copy an object with JSON.parse and JSON.stringify: You can deep copy any object by converting it to a string and back to an object.
+// ----------------------------------------------------------------------------------------
+console.log('JSON parse to deep copy');
+
+const objectToCopy = {
+    name: "Juan",
+    age: 23,
+    job: "Developer",
+    location: {
+        city: "Bogota",
+    },
+    admin: true
+}
+console.log({objectToCopy});
+const deepCopy = (objectIn) => JSON.parse(JSON.stringify(objectIn));
+const copy = deepCopy(objectToCopy);
+console.log({copy});
 
 
 //-----------------------------------------------------------------------------------------
