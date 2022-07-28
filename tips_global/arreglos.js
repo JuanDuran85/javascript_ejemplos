@@ -312,3 +312,22 @@ console.log({maximunValueFromArray});
 const minumumValueFromArray = arrayToCalculeAll.reduce((num5,num6) => num5 < num6 ? num5 : num6);
 console.log({minumumValueFromArray});
 // ----------------------------------------------------------------------------------------
+
+console.log('-----------------------------------------------------------------------------------------');
+
+// ----------------------------------------------------------------------------------------
+// Se puede utilizar funciones, ciclos y condicionales basicos para encontrar la cantidad de veces que se repite un elemento en un array.
+// ----------------------------------------------------------------------------------------
+console.log("Contador de elemento en un array");
+const arryToCountItem = ["casa", "carro", "perro", "carro", "perro"];
+console.log({arryToCountItem});
+const contadorElemento = (unidimensionalArray, elemento) => {
+  let contador = 0;
+  for (const elementInArray of unidimensionalArray) {
+    if (elementInArray === elemento) contador++;
+  }
+  return contador;
+};
+
+console.log(`El elemento: carro se repite: ${contadorElemento(arryToCountItem, "carro")} veces`);
+// ----------------------------------------------------------------------------------------
