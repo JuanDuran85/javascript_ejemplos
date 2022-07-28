@@ -199,6 +199,33 @@ const filteredAndSortedKeywords = arrayWithString
   )
   .sort((a, b) => (a < b ? -1 : 1));
   console.log({filteredAndSortedKeywords});
+//-----------------------------------------------------------------------------------------
 
 
+console.log('-----------------------------------------------------------------------------------------');
+
+// ----------------------------------------------------------------------------------------
+// Implementando funciones y objetos para crear un mapa de opciones: Se puede crear un objeto donde el key es la opcion y el value la funcion que se desea ejecutar. Esto permite evitar el uso de tantas condiciones if/else en un trozo de codigo. 
+// ----------------------------------------------------------------------------------------
+console.log("Funciones y Objetos para no user condicionales");
+
+const preguntarQueQuiereComer = () => console.log("Que quiere comer?");
+const cocinarHamburguesa = () => console.log("Cocinar hamburguesa");
+const cocinarPizza = () => console.log("Cocinar pizza");
+
+const prepararComida = (comida) => {
+    const queCocinar = {
+        hamburguesa: cocinarHamburguesa,
+        pizza: cocinarPizza,
+        nachos: () => console.log("Cocinando nachos"),
+    }
+
+    if (queCocinar[comida]) {
+        queCocinar[comida]();
+    } else {
+        preguntarQueQuiereComer();
+    }
+}
+
+prepararComida("nachos");
 //-----------------------------------------------------------------------------------------

@@ -314,5 +314,21 @@ console.log(`year existe en producto: ${Reflect.has(product, "year")}`);
 console.log("Method 3 - hasOwnProperty method");
 console.log(`name existe en producto: ${product.hasOwnProperty("name")}`);
 console.log(`year existe en producto: ${product.hasOwnProperty("year")}`);
+//-----------------------------------------------------------------------------------------
+
+console.log('-----------------------------------------------------------------------------------------');
+
+// ----------------------------------------------------------------------------------------
+// Destructuracion Dinamica: ¿como desestructuramos un objeto si no sabemos por adelantado sus propiedades? Podemos usar [backet notation] para compopnerlas de forma dinamica.
+// ----------------------------------------------------------------------------------------
+console.log('Destructuracion Dinamica');
+const usuarioTwo = {
+    nombreTwo: "Juan",
+};
+console.log({usuarioTwo});
+const propiedad = 'nombreTwo'; // es el identificador de la propiedad a que quiero acceder
+const { [propiedad]: valor } = usuarioTwo;
+console.log({valor}); // valor es la variable que contendra el valor de la propiedad
+
 
 //-----------------------------------------------------------------------------------------
