@@ -42,11 +42,19 @@ console.log(persona)
 console.log('-----------------------------------------------------------------------------------------');
 
 // ----------------------------------------------------------------------------------------
-// 
+// Creating a static method in a class, to do not extend the built-in methods, create your own utilities instead.
 // ----------------------------------------------------------------------------------------
+console.log("Static method")
+class ArrayUtils {
+    static average(listArray){
+        return listArray.reduce((acumulator, element) => acumulator + element) / listArray.length;
+    }
+}
 
-
-
+const listArrayToCalcule = [20,12,15,9,20,17];
+console.log({listArrayToCalcule});
+const averageTotal = ArrayUtils.average(listArrayToCalcule);
+console.log({averageTotal});
 //-----------------------------------------------------------------------------------------
 
 console.log('-----------------------------------------------------------------------------------------');

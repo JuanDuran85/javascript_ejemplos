@@ -213,6 +213,7 @@ console.log('-------------------------------------------------------------------
 // Se puede utilizar el operador ?? (Nullish coalescing operator (??)*) para comprobar si una variable existe o no y mandar a ejecutar una funcion cualquiera. 
 // *The nullish coalescing operator (??) is a logical operator that returns its right-hand side operand when its left-hand side operand is null or undefined, and otherwise returns its left-hand side operand.
 // ----------------------------------------------------------------------------------------
+console.log("Using the nullish coalescing operator (??)");
 
 const valorAVerificar1 = [undefined, null, 0, false, "", NaN, true, [],{}];
 
@@ -237,6 +238,14 @@ for (const valor of valorAVerificar1) {
     console.log(valor);
     valor ?? ejecutada(valor);
 }
+
+// The nullish coalescing operator (??) assign a default value if the left-hand or variable is null or undefined (not set).
+const priceArticule = 0;
+let priceArticuleTwo;
+const defaultPriceOne = priceArticule ?? 120;
+const defaultPriceTwo = priceArticuleTwo ?? 647;
+console.log({defaultPriceOne});
+console.log({defaultPriceTwo});
 //-----------------------------------------------------------------------------------------
 
 console.log('-----------------------------------------------------------------------------------------');

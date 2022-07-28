@@ -159,6 +159,51 @@ createUserFinal({userName: "Maria", isAdmin: true, mail: "maria@correo.com"});
 console.log('-----------------------------------------------------------------------------------------');
 
 // ----------------------------------------------------------------------------------------
+// Creating a resuable pipe function
+// ----------------------------------------------------------------------------------------
+console.log('Create a generic pipe function');
+
+// creating the pipe function
+const pipe = (...fns) => (arg) => fns.reduce((value,fn) => fn(value), arg);
+
+// use it to create a reusable pipe
+const calculateProfit = pipe(
+    // deduct VAT (8%)
+    value => value * (1 - 0.08),
+
+    // deduct tax (10%)
+    value => value * (1 - 0.10),
+
+    // add external contribution
+    value => value + 1250,
+
+    // split with co-founders (3 in this case, for example)
+    value => value / 3
+);
+
+// use the pipe to perform calculation
+const revenue = 50_000;
+const profit = calculateProfit(revenue);
+console.log(`El profit es: ${profit | 0}`);
+//-----------------------------------------------------------------------------------------
+
+console.log('-----------------------------------------------------------------------------------------');
+
+// ----------------------------------------------------------------------------------------
+// Se puede crear una funcion que permita recortar una cadena de texto especifica, pasadando como parametro la cadena y la cantidad de texto que se desee mostrar, verificando si la cadena enviada es realmente un string.
+// ----------------------------------------------------------------------------------------
+const truncateFunction = (stringIn, lengthToShow) => {
+    if((stringIn.constructor === String) && (lengthToShow > 0)){
+        return stringIn.slice(0, lengthToShow);
+    }
+};
+
+console.log(truncateFunction("Ejemplo de string", 4));
+//-----------------------------------------------------------------------------------------
+
+console.log('-----------------------------------------------------------------------------------------');
+
+// ----------------------------------------------------------------------------------------
 // 
 // ----------------------------------------------------------------------------------------
 

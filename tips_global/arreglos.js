@@ -288,8 +288,27 @@ const dataFinal = [
 ];
 console.log({dataFinal});
 console.log(`La cuenta para el elemento: carro es: ${countItemFromArray(dataFinal, "carro")}`);
+// ----------------------------------------------------------------------------------------
 
+console.log('-----------------------------------------------------------------------------------------');
 
+// ----------------------------------------------------------------------------------------
+// With the use of reduce method easily calcule the total, minumum and maximum value in the array.
+// ----------------------------------------------------------------------------------------
+console.log("Get total, min and max from array with reduce");
 
+const arrayToCalculeAll = [4,6,3,1,8,9,0,5,-4,2];
+console.log({arrayToCalculeAll});
 
+// Total
+const totalValueFromArray = arrayToCalculeAll.reduce((num1,num2) => num1 + num2);
+console.log({totalValueFromArray});
+
+// Maximum
+const maximunValueFromArray = arrayToCalculeAll.reduce((num3,num4) => num3 > num4 ? num3 : num4);
+console.log({maximunValueFromArray});
+
+// Minimum
+const minumumValueFromArray = arrayToCalculeAll.reduce((num5,num6) => num5 < num6 ? num5 : num6);
+console.log({minumumValueFromArray});
 // ----------------------------------------------------------------------------------------
