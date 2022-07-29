@@ -56,5 +56,17 @@ console.log(mensajeCompleto.match(/a/gi)); // retorna un array con todas las coi
 
 //-----------------------------------------------------------------------------------------
 
+console.log('-----------------------------------------------------------------------------------------');
+
+// ----------------------------------------------------------------------------------------
+// Para convertir cada uno de los elementos de una cadena de string en mayuscula, se puede utilizar el operador spread en conjunto con el metodo map.
+// ----------------------------------------------------------------------------------------
+console.log("Convertir a Mayuscula una string");
+const stringToConvert = "Cadena de caracteres a convertir";
+
+const processedConvert = [...stringToConvert].map(element => element.toUpperCase()).join('-');
+console.log(`Texto orginal: ${stringToConvert}. Texto transformado: ${processedConvert}`);
+//-----------------------------------------------------------------------------------------
+
 
 console.log('-----------------------------------------------------------------------------------------');
