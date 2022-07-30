@@ -376,10 +376,17 @@ Object.entries(objectToEntryAll).forEach(([key, value]) => console.log(`${key}: 
 console.log('-----------------------------------------------------------------------------------------');
 
 // ----------------------------------------------------------------------------------------
-// 
+// Se puede agregar una propiedad dinamica a un objeto mediante el uso de corchetes
 // ----------------------------------------------------------------------------------------
-console.log('');
-
+console.log('Agregando propiedad dinamica');
+const dynamicProperty = "pais";
+const userAdmin = {
+    name: "Juan",
+    age: 23,
+    job: "Developer",
+    [dynamicProperty]: "Venezuela",
+};
+console.log({userAdmin});
 //-----------------------------------------------------------------------------------------
 
 console.log('-----------------------------------------------------------------------------------------');

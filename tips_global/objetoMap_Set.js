@@ -1,6 +1,6 @@
 /*
 
-Ejemplos, trucos y tips para trabajar con el Objeto Map en JavaScript
+Ejemplos, trucos y tips para trabajar con el Objeto Map, Set en JavaScript
 
 */
 

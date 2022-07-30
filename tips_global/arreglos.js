@@ -335,11 +335,42 @@ console.log(`El elemento: carro se repite: ${contadorElemento(arryToCountItem, "
 console.log('-----------------------------------------------------------------------------------------');
 
 // ----------------------------------------------------------------------------------------
-// 
+// Se puede utilizar splice mas indexOf para eliminar un elemento en especifico de una arreglo de acuerdo a su ubicacion.
 // ----------------------------------------------------------------------------------------
-console.log("");
+console.log("Eliminando un elemeto de un arreglo");
+let numerosLoteria = [4,6,2,7,9,10,1,2,11,3];
+console.log({numerosLoteria});
+const indexNumero = numerosLoteria.indexOf(177);
+numerosLoteria.splice(indexNumero,indexNumero > 0 ? 1 : 0);
+console.log({numerosLoteria});
+// ----------------------------------------------------------------------------------------
+
+console.log('-----------------------------------------------------------------------------------------');
 
 // ----------------------------------------------------------------------------------------
+// Se puede utilizar funciones, ciclos y condicionales basicos para encontrar la cantidad de veces que se repite un elemento en una matriz.
+// ----------------------------------------------------------------------------------------
+console.log("Contador de elemento en una matriz");
+const countElementInMatrix = (matrix, element) => {
+  let countTotalTwo = 0;
+  for (const row of matrix) {
+    for (const elementInRow of row) {
+      if (elementInRow === element) countTotalTwo++;
+    }
+  }
+  return countTotalTwo;
+};
+
+const dataFinalTwo = [
+  ["casa", "carro", "perro"],
+  ["carro", "perro", "pc"],
+  ["casa", "gato"],
+  ["carro", "perro", "pc"],
+];
+console.log({dataFinalTwo});
+console.log(`El elemento: carro se repite: ${countElementInMatrix(dataFinalTwo, "carro")} veces`);
+// ----------------------------------------------------------------------------------------
+
 
 console.log('-----------------------------------------------------------------------------------------');
 
