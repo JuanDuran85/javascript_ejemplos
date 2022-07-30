@@ -375,10 +375,15 @@ console.log(`El elemento: carro se repite: ${countElementInMatrix(dataFinalTwo, 
 console.log('-----------------------------------------------------------------------------------------');
 
 // ----------------------------------------------------------------------------------------
-// 
+// You can filter number from an array using filter by passing Number as an argument, but if you want filter only integer number and not string number, you can use the isInteger method. 
 // ----------------------------------------------------------------------------------------
-console.log("");
-
+console.log("Number.isInteger");
+const arrayNumbers = ['1','2',3,'4',5,'6','texto',false,true,[],{},null,undefined,0,'0'];
+console.log({arrayNumbers});
+const resultNumberFilterOne = arrayNumbers.filter(Number);
+console.log({resultNumberFilterOne});
+const resultNumberFilterTwo = arrayNumbers.filter(Number.isInteger);
+console.log({resultNumberFilterTwo});
 // ----------------------------------------------------------------------------------------
 
 console.log('-----------------------------------------------------------------------------------------');
