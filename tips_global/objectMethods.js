@@ -36,9 +36,9 @@
 */
 
 const newUser = {
-name: "Nikola",
-lastName: "Tesla",
-occupation: "Engineer",
+    name: "Nikola",
+    lastName: "Tesla",
+    occupation: "Engineer",
 };
 
 console.log(

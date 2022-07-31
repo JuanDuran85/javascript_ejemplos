@@ -392,10 +392,33 @@ console.log({userAdmin});
 console.log('-----------------------------------------------------------------------------------------');
 
 // ----------------------------------------------------------------------------------------
-// 
+// Se puede utilizar el ciclo for..of para recorrer un objeto, pero, los objetos por definicion no son iterables, pero al utlizar Object, disponemos de metodos estaticos que nos ayudara a iterar sobre los objetos
 // ----------------------------------------------------------------------------------------
-console.log('');
+console.log("Usando for..of para objetos");
+const users = [
+  { name: "Juan", age: 20 },
+  { name: "Pedro", age: 30 },
+  { name: "Maria", age: 40 },
+];
 
+// como primera opcion podemos implementar el Object.keys, el cual retorna un array con las propiedades de un objeto
+for (const key of Object.keys(users)) {
+    console.log(key);
+}
+
+//Igualmente se puede implementar el Object.values para retornar un array con los valores de un objeto
+for (const values of Object.values(users)) {
+    console.log(values);
+}
+
+// Finalmente se puede aplicar el Object.entries para retornar un arreglo compuesto por arreglos que contienen el par propiedad y valor
+for (const [key, value] of Object.entries(users)) {
+    console.log(key, value);
+}
+
+console.log(Object.keys(users))
+console.log(Object.values(users))
+console.log(Object.entries(users))
 //-----------------------------------------------------------------------------------------
 
 console.log('-----------------------------------------------------------------------------------------');

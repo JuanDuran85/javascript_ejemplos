@@ -389,19 +389,36 @@ console.log({resultNumberFilterTwo});
 console.log('-----------------------------------------------------------------------------------------');
 
 // ----------------------------------------------------------------------------------------
-// 
+// Se puede mezclar los elementos de un array mediante la utilizacion de spread operator, sort method y la libreria Math con las funciones round y random.
 // ----------------------------------------------------------------------------------------
-console.log("");
-
+console.log("Mezclando elementos de una array");
+const colors = ["rojo", "azul", "verde", "amarillo", "rosa"];
+console.log({colors});
+const getArayColorsMixed = (arrayIn = []) => [...arrayIn].sort(()=> Math.round(Math.random())*2-1);
+console.log(getArayColorsMixed(colors));
+console.log(getArayColorsMixed(colors));
+console.log(getArayColorsMixed(colors));
 // ----------------------------------------------------------------------------------------
 
 console.log('-----------------------------------------------------------------------------------------');
 
 // ----------------------------------------------------------------------------------------
-// 
+// Se puede utilizar for..of para atravesar arreglos, tambien se puede agregar desestructuracion para capturar una propiedad en particular.
 // ----------------------------------------------------------------------------------------
-console.log("");
+console.log("Usando for..of para arreglos");
+const users = [
+  { name: "Juan", age: 20 },
+  { name: "Pedro", age: 30 },
+  { name: "Maria", age: 40 },
+];
 
+for (const userValues of users) {
+  console.log(userValues);
+}
+
+for (const { name } of users) {
+  console.log(name);
+}
 // ----------------------------------------------------------------------------------------
 
 console.log('-----------------------------------------------------------------------------------------');
