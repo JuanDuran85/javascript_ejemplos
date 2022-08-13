@@ -145,3 +145,22 @@ console.log({reduceTimeStyleForm});
 
 console.log('-----------------------------------------------------------------------------------------');
 
+console.log('-----------------------------------------------------------------------------------------');
+
+// ----------------------------------------------------------------------------------------
+//  Formato de horas y fechas mediante una funcion con Intl.DateTimeFormat()
+// ----------------------------------------------------------------------------------------
+
+const formatDateTime = (date, locale, options) => new Intl.DateTimeFormat(locale, options).format(date);
+
+const nowDate = new Date();
+
+console.log(formatDateTime(nowDate, 'en-US', {timeStyle: 'medium'}));
+console.log(formatDateTime(nowDate, 'es'));
+console.log(formatDateTime(nowDate, 'es', {timeStyle: 'short'}));
+console.log(formatDateTime(nowDate, 'ko'));
+console.log(formatDateTime(nowDate, 'en', {timeStyle: 'short', day: 'numeric'}));
+
+// ----------------------------------------------------------------------------------------
+
+console.log('-----------------------------------------------------------------------------------------');
