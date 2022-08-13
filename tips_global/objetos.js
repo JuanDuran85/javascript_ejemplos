@@ -424,10 +424,36 @@ console.log(Object.entries(users))
 console.log('-----------------------------------------------------------------------------------------');
 
 // ----------------------------------------------------------------------------------------
-// 
+// Usando funciones y las propiedades de los objetos para verificar si las propiedades de un objeto contienen un valor especifico 
 // ----------------------------------------------------------------------------------------
-console.log('');
+console.log('Funciones y Objetos');
+const almacen = {
+    'estabteria1': {
+        'cajon1': {
+            'producto1': 'camas',
+            'producto2': 'mesa',
+            'producto3': 'silla',
+        }
+    },
+    'estabteria2': {
+        'cajon2': {
+            'producto1': 'pantalones',
+            'producto2': 'camisas',
+            'producto3': 'zapatos',
+            'producto4': 'chaquetas',
+        }
+    }
+}
 
+const containsFunction = (store, productIn) => {
+    if (store && typeof store === 'object') {
+        return Object.values(store).some((item) => containsFunction(item, productIn));
+    }
+
+    return store === productIn;
+}
+
+console.log(containsFunction(almacen, 'camasss'));
 //-----------------------------------------------------------------------------------------
 
 console.log('-----------------------------------------------------------------------------------------');
