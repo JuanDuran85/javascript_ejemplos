@@ -99,10 +99,25 @@ callPersonName(animalInstance);
 console.log('-----------------------------------------------------------------------------------------');
 
 // ----------------------------------------------------------------------------------------
-// 
+// Private class methods and accesors. The private attributes can be vreated by prepending '#' before attribute. The private methods can be created by prepending '#' before method name. The private methods can be accessed by using '#' before the method. 
 // ----------------------------------------------------------------------------------------
+console.log("Private class methods and accesors");
+class Developer {
+    #uniqueStr;
+    
+    #generateApiKey(){
+        this.#uniqueStr = "The Key to use...";
+    }
 
+    getApiKey(){
+        this.#generateApiKey();
+        return this.#uniqueStr;
+    }
+}
 
+const developer = new Developer();
+const developerApiKey = developer.getApiKey();
+console.log({developerApiKey});
 
 //-----------------------------------------------------------------------------------------
 

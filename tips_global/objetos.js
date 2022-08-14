@@ -459,6 +459,55 @@ console.log(containsFunction(almacen, 'camasss'));
 console.log('-----------------------------------------------------------------------------------------');
 
 // ----------------------------------------------------------------------------------------
+// Accessors Getters in literal objects
+// ----------------------------------------------------------------------------------------
+console.log('Getters');
+// Getter (The get keyword)
+
+const personGetter = {
+    firstName: "Juan",
+    lastName: "Perez",
+
+    // get full name by method
+    fullNameOne: function () {
+        return `${this.firstName } ${this.lastName}`;
+    },
+
+    //get full name by getter
+    get fullNameTwo() {
+        return `${this.firstName } ${this.lastName}`;
+    }
+}
+
+// Display data from the object using a method
+console.log(personGetter.fullNameOne());
+// Display data from the object using a getter
+console.log(personGetter.fullNameTwo);
+//-----------------------------------------------------------------------------------------
+
+
+console.log('-----------------------------------------------------------------------------------------');
+
+// ----------------------------------------------------------------------------------------
+// Accessors Setters in literal objects
+// ----------------------------------------------------------------------------------------
+console.log('Setters');
+const personSetter = {
+    firstName: "Juan",
+    lastName: "Perez",
+    languaje: "Spanish",
+    set lang( lang ) {
+        this.languaje = lang;
+    },
+}
+
+personSetter.lang = "English";
+console.log(personSetter.languaje);
+//-----------------------------------------------------------------------------------------
+
+console.log('-----------------------------------------------------------------------------------------');
+
+// ----------------------------------------------------------------------------------------
 // 
 // ----------------------------------------------------------------------------------------
 console.log('');
