@@ -125,6 +125,74 @@ console.log({developerApiKey});
 console.log('-----------------------------------------------------------------------------------------');
 
 // ----------------------------------------------------------------------------------------
+// Implement a builder with method chaining. Method chaining is implemented by returning this in each method of the builder.
+// ----------------------------------------------------------------------------------------
+console.log("method chaining");
+
+class Builder {
+  #principalList = [];
+
+  add(value) {
+    this.#principalList.push(value);
+    return this;
+  }
+
+  remove(value) {
+    this.#principalList = this.#principalList.filter(
+      (currenValue) => currenValue !== value
+    );
+    return this;
+  }
+
+  log() {
+    console.log(this.#principalList);
+    return this;
+  }
+}
+
+const builderInstance = new Builder();
+
+builderInstance.add(23).log().add(7).log().remove(7).log();
+
+//-----------------------------------------------------------------------------------------
+
+console.log('-----------------------------------------------------------------------------------------');
+
+// ----------------------------------------------------------------------------------------
+// Lazy-loading property pattern in javascript with class.
+// ----------------------------------------------------------------------------------------
+console.log("Lazy-loading property pattern");
+
+const expensiveOperation = stringIn => stringIn === '' ? '' : expensiveOperation(stringIn.substring(1)) + stringIn.charAt(0); 
+
+class MyClass {
+    get data(){
+        const actualData = expensiveOperation("texto caulquiera...");
+        Object.defineProperty(this, 'data', {
+            value: actualData,
+            writable: false,
+            configurable: false,
+            enumerable: false
+        });
+        return actualData;
+    }
+}
+
+const newObjectOne = new MyClass();
+
+console.time("Primer llamado");
+console.log(newObjectOne.data);
+console.timeEnd("Primer llamado");
+
+console.time("Segundo llamado");
+console.log(newObjectOne.data);
+console.timeEnd("Segundo llamado");
+
+//-----------------------------------------------------------------------------------------
+
+console.log('-----------------------------------------------------------------------------------------');
+
+// ----------------------------------------------------------------------------------------
 // 
 // ----------------------------------------------------------------------------------------
 
