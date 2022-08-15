@@ -229,3 +229,23 @@ const prepararComida = (comida) => {
 
 prepararComida("nachos");
 //-----------------------------------------------------------------------------------------
+
+console.log('-----------------------------------------------------------------------------------------');
+
+// ----------------------------------------------------------------------------------------
+// Utilizando funciones con arreglos y reduce para retornar un objeto (key: value) de una lista de objetos.
+// ----------------------------------------------------------------------------------------
+console.log("Funciones y Reduce");
+
+const indexArrayByKey = (array, key) => {
+    return array.reduce((acumulado, elemento) => {
+        const index = elemento[key];
+        return {
+            ...acumulado,
+            [index]: elemento,
+        };
+    },{});
+}
+
+console.log(indexArrayByKey([{id: 1, name: "Juan"}, {id: 2, name: "Pedro"}], "id"));
+//-----------------------------------------------------------------------------------------

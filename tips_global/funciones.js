@@ -204,6 +204,33 @@ console.log(truncateFunction("Ejemplo de string", 4));
 console.log('-----------------------------------------------------------------------------------------');
 
 // ----------------------------------------------------------------------------------------
+// Iterative approach vs Recursive approach for factorial number.
+// ----------------------------------------------------------------------------------------
+console.log('Iterative approach');
+const iterativeFactorial = (num) => {
+    for (let index = num-1; index > 0; index--) {
+        num *= index;
+    }
+    return num; 
+}
+console.time("iterativo");
+console.log(iterativeFactorial(5));
+console.timeEnd("iterativo");
+
+console.log('Recursive approach');
+const recursiveFactorial = (number) => {
+    if (number == 1) return 1;
+    return number * recursiveFactorial(number - 1);
+}
+console.time("recursivo");
+console.log(recursiveFactorial(5));
+console.timeEnd("recursivo");
+//-----------------------------------------------------------------------------------------
+
+
+console.log('-----------------------------------------------------------------------------------------');
+
+// ----------------------------------------------------------------------------------------
 // 
 // ----------------------------------------------------------------------------------------
 
