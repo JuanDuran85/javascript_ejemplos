@@ -249,3 +249,33 @@ const indexArrayByKey = (array, key) => {
 
 console.log(indexArrayByKey([{id: 1, name: "Juan"}, {id: 2, name: "Pedro"}], "id"));
 //-----------------------------------------------------------------------------------------
+
+
+console.log('-----------------------------------------------------------------------------------------');
+
+
+// ----------------------------------------------------------------------------------------
+// Function to transform an array to a CSV with or not default format
+// ----------------------------------------------------------------------------------------
+console.log("Array to CSV");
+
+const dataToTransform = [
+    ["John", "Liverpool","Guitar"],
+    ["Ringo", "Liverpool","Percussion"],
+    ["Paul", "Liverpool","Bass"],
+    ["George", "Liverpool","Guitar"],
+];
+
+const toCsvIn = (inputArray, separator = ",") => {
+    // join items inside each nested array into string
+    let rowsAsString = inputArray.map(row => row.join(separator));
+    // join arrays separeted by a link break
+    return rowsAsString.join("\n");
+};
+
+console.log(toCsvIn(dataToTransform));
+console.log("\n")
+console.log(toCsvIn(dataToTransform, ";"));
+console.log("\n")
+console.log(toCsvIn(dataToTransform, "|"));
+//-----------------------------------------------------------------------------------------
