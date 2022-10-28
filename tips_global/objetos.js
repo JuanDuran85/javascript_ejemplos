@@ -508,8 +508,16 @@ console.log(personSetter.languaje);
 console.log('-----------------------------------------------------------------------------------------');
 
 // ----------------------------------------------------------------------------------------
-// 
+// Creando un nuevo objeto a partir de otro mediante los valores del mismo como llava-valor
 // ----------------------------------------------------------------------------------------
-console.log('');
-
+console.log("Nuevo objeto a partir de otro");
+const userObjectOne = {
+    name: 'Juan',
+    age: 30
+};
+console.log({userObjectOne});
+const userAges = (user) => ({[user.name] : user.age});
+console.log(userAges(userObjectOne));
 //-----------------------------------------------------------------------------------------
+
+console.log('-----------------------------------------------------------------------------------------');
