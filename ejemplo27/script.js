@@ -6,14 +6,14 @@ atributos y métodos disponibles. */
 
 document.querySelector('form').addEventListener('submit',(e)=>{
     e.preventDefault();
-    
-    let muestra = document.querySelector('#muestra');
-    muestra.innerHTML = "";
-    let name = document.querySelector('#animal').value;
-    let food = document.querySelector('#herbivoro').value;
-    let lengthRun = document.querySelector('#fitofago').value;
 
-    let deer = new Fitofago(name,food,lengthRun);
+    const muestra = document.querySelector('#muestra');
+    muestra.innerHTML = "";
+    const name = document.querySelector('#animal').value;
+    const food = document.querySelector('#herbivoro').value;
+    const lengthRun = document.querySelector('#fitofago').value;
+
+    const deer = new Fitofago(name,food,lengthRun);
 
     muestra.innerHTML = `
     <div class="card text-white bg-danger my-5 mx-auto">

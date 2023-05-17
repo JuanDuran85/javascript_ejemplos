@@ -51,21 +51,16 @@ class ForeignStrategy {
     const year = fullDate.getFullYear();
     const month = fullDate.getMonth() + 1;
     const day = fullDate.getDate();
-    try {
-          const values = await fetch(
-              `https://mindicador.cl/api/${indicator}/${day}-${month}-${year}`
-          );
-          const result = await values.json();
-          return result.serie[0].valor
-      } catch (error) {
-          console.error(error);
-      }
+
+    const response = await fetch(
+      `https://mindicador.cl/api/${indicator}/${day}-${month}-${year}`
+    );
+    return await response.json();
   }
 
-  calculate(amount, exchangeRate) {
-    console.log(amount);
-    console.log(exchangeRate);
-    return amount * exchangeRate;
+  async calculate(amount, exchangeRate) {
+    const value = await this.getExchangeRate(exchangeRate);
+    return value.serie[0].valor * amount
   }
 }
 
@@ -77,5 +72,4 @@ console.log(generalContext.calculate(100));
 generalContext.setStrategy(discountObject);
 console.log(generalContext.calculate(100));
 const resultRate = new ForeignStrategy();
-console.log(resultRate.getExchangeRate("dolar"));
-
+resultRate.calculate(100, "dolar").then(value => console.log(value));
