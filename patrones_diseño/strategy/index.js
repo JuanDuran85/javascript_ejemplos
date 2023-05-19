@@ -75,10 +75,55 @@ console.log(generalContext.calculate(100));
 generalContext.setStrategy(resultRate);
 generalContext.calculate(200).then((value) => console.log(value));
 
-
 //------------------------------------------------------------------------------------------------
 /*
-  Strategy pattern
+  Strategy pattern: se utiliza cuando se tienen comportamientos que van a cambiar en un objeto en tiempo de ejecucion. En donde el contexto sera el objeto a crear, las estrategias que tendra el comportamiento y las respectivas interfaces.
 */
 
+const data = [
+  {
+    name: "Lynx, african",
+    country: "Thailand",
+    info: "eu magna vulputate luctus cum sociis natoque penatibus et magnis dis",
+    img: "http://dummyimage.com/171x100.png/dddddd/000000",
+  },
+  {
+    name: "American Virginia opossum",
+    country: "China",
+    info: "dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante",
+    img: "http://dummyimage.com/116x100.png/dddddd/000000",
+  },
+  {
+    name: "Dragon, western bearded",
+    country: "Myanmar",
+    info: "nec nisi volutpat eleifend donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim",
+    img: "http://dummyimage.com/241x100.png/cc0000/ffffff",
+  },
+  {
+    name: "Western bearded dragon",
+    country: "Russia",
+    info: "praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus vel pede",
+    img: "http://dummyimage.com/146x100.png/dddddd/000000",
+  },
+  {
+    name: "Australian brush turkey",
+    country: "Belarus",
+    info: "sed tristique in tempus sit amet sem fusce consequat nulla nisl nunc nisl duis bibendum felis sed interdum",
+    img: "http://dummyimage.com/103x100.png/dddddd/000000",
+  },
+];
 
+class InfoContext {
+  constructor(strategy, data, element) {
+    this.strategy = strategy;
+    this.data = data;
+    this.element = element;
+  }
+  setStrategy(strategy) {
+    this.strategy = strategy;
+  }
+
+  showStrategy(){
+    this.strategy.showStrategy(this.data, this.element);
+  }
+}
