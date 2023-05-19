@@ -58,18 +58,27 @@ class ForeignStrategy {
     return await response.json();
   }
 
-  async calculate(amount, exchangeRate) {
+  async calculate(amount, exchangeRate = "dolar") {
     const value = await this.getExchangeRate(exchangeRate);
-    return value.serie[0].valor * amount
+    return value.serie[0].valor * amount;
   }
 }
 
 // creando objetos
 const regularSaleObject = new RegularSaleStrategy(0.19);
 const discountObject = new DiscountStrategy(0.19, 20);
+const resultRate = new ForeignStrategy();
 const generalContext = new SalesContext(regularSaleObject);
 console.log(generalContext.calculate(100));
 generalContext.setStrategy(discountObject);
 console.log(generalContext.calculate(100));
-const resultRate = new ForeignStrategy();
-resultRate.calculate(100, "dolar").then(value => console.log(value));
+generalContext.setStrategy(resultRate);
+generalContext.calculate(200).then((value) => console.log(value));
+
+
+//------------------------------------------------------------------------------------------------
+/*
+  Strategy pattern
+*/
+
+
