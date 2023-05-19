@@ -123,7 +123,59 @@ class InfoContext {
     this.strategy = strategy;
   }
 
-  showStrategy(){
+  showStrategy() {
     this.strategy.showStrategy(this.data, this.element);
   }
 }
+
+class ListStrategy {
+  showStrategy(data, element) {
+    element.innerHTML = data.reduce((acc, animal) => {
+      return (
+        acc +
+        `
+      <div>
+          <h2>${animal.name}</h2>
+          <p>${animal.country}</p>
+      </div>
+      <hr>
+     `
+      );
+    }, "");
+  }
+}
+
+class DetailListStrategy {
+  showStrategy(data, element) {
+    element.innerHTML = data.reduce((acc, animal) => {
+      return (
+        acc +
+        `
+      <div>
+          <h2>${animal.name}</h2>
+          <p>${animal.country}</p>
+          <p>${animal.info}</p>
+          <img src=${animal.img} />
+      </div>
+      <hr>
+     `
+      );
+    }, "");
+  }
+}
+
+const strategyObjects = [
+  new ListStrategy(),
+  new DetailListStrategy(),
+]
+
+options.addEventListener("change", (event) => {
+  event.preventDefault();
+  const option = event.target.value
+  info.setStrategy(strategyObjects[option]);
+  info.showStrategy();
+})
+
+
+const info = new InfoContext(new ListStrategy(), data, container);
+info.showStrategy();
