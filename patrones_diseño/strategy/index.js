@@ -164,18 +164,35 @@ class DetailListStrategy {
   }
 }
 
+class ListWithImgAndNameStrategy {
+  showStrategy(data, element) {
+    element.innerHTML = data.reduce((acc, animal) => {
+      return (
+        acc +
+        `
+      <div>
+      <img src=${animal.img} width="10%"/>
+          <h2>${animal.name}</h2>
+      </div>
+      <hr>
+     `
+      );
+    }, "");
+  }
+}
+
 const strategyObjects = [
   new ListStrategy(),
   new DetailListStrategy(),
-]
+  new ListWithImgAndNameStrategy(),
+];
 
 options.addEventListener("change", (event) => {
   event.preventDefault();
-  const option = event.target.value
+  const option = event.target.value;
   info.setStrategy(strategyObjects[option]);
   info.showStrategy();
-})
-
+});
 
 const info = new InfoContext(new ListStrategy(), data, container);
 info.showStrategy();
