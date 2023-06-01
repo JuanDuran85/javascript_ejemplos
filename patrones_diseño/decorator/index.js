@@ -6,28 +6,50 @@
 
 // component
 class ProductComponent {
-    constructor(name) {
-        this.name = name;
-    }
+  constructor(productName) {
+    this.productName = productName;
+  }
 
-    getDetail(){
-        return `The name of the component is: ${this.name}`
-    }
+  getDetail() {
+    return `The productName of the component is: ${this.productName}`;
+  }
 }
 
 // decorator, this class will never be used directly
 class ProductDecorator {
-    //recived an object type of ProductComponent
-    constructor(productComponent){
-        this.productComponent = productComponent;
-    }
+  //recived an object type of ProductComponent
+  constructor(productComponent) {
+    this.productComponent = productComponent;
+  }
 
-    getDetail(){
-        return this.productComponent.getDetail()
-    }
+  getDetail() {
+    return this.productComponent.getDetail();
+  }
 }
 
 class ComercialInfoProductDecorator extends ProductDecorator {
-    
+  constructor(productComponent, tradeName, brand) {
+    super(productComponent);
+
+    this.tradeName = tradeName;
+    this.brand = brand;
+  }
+
+  getDetail() {
+    return `${super.getDetail()}. Nombre de la marca: ${
+      this.brand
+    }. Nombre comercial: ${this.tradeName}`;
+  }
 }
 
+// Ejecution
+// component
+
+const productComponentInstance = new ProductComponent("Galleta");
+console.log(productComponentInstance);
+console.log(productComponentInstance.getDetail());
+
+// using decorator one with component
+const productDecoratorOne = new ComercialInfoProductDecorator(productComponentInstance,'Cereal Maiz X','Cerialito');
+console.log(productDecoratorOne);
+console.log(productDecoratorOne.getDetail());
