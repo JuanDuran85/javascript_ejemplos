@@ -27,6 +27,7 @@ class ProductDecorator {
   }
 }
 
+// decorator One - we can use
 class ComercialInfoProductDecorator extends ProductDecorator {
   constructor(productComponent, tradeName, brand) {
     super(productComponent);
@@ -42,14 +43,62 @@ class ComercialInfoProductDecorator extends ProductDecorator {
   }
 }
 
+// decorator two - we can use
+class StoreInfoProductDecorator extends ProductDecorator {
+  constructor(productDeorator, productPrice) {
+    super(productDeorator);
+    this.productPrice = productPrice;
+  }
+
+  getDetail() {
+    return `${super.getDetail()}. Precio del producto: ${this.productPrice} `;
+  }
+}
+
+// decorator three - using to create HTML code
+class HtmlInjectProductDecorator extends ProductDecorator {
+  getDetail() {
+    return `
+    <h1>Información del producto</h1>
+    <p>${super.getDetail()}</p>
+    `;
+  }
+}
+
 // Ejecution
 // component
-
 const productComponentInstance = new ProductComponent("Galleta");
 console.log(productComponentInstance);
-console.log(productComponentInstance.getDetail());
 
 // using decorator one with component
-const productDecoratorOne = new ComercialInfoProductDecorator(productComponentInstance,'Cereal Maiz X','Cerialito');
-console.log(productDecoratorOne);
-console.log(productDecoratorOne.getDetail());
+const comercialDecoratorOne = new ComercialInfoProductDecorator(
+  productComponentInstance,
+  "Cereal Maiz X",
+  "Cerialito"
+);
+console.log(comercialDecoratorOne);
+
+// using decorator two with component
+const storeDecoratorOne = new StoreInfoProductDecorator(
+  productComponentInstance,
+  546.283
+);
+console.log(storeDecoratorOne);
+
+// using decorator two - with another decorator
+const storeDecoratorTwo = new StoreInfoProductDecorator(comercialDecoratorOne,2368.65);
+console.log(storeDecoratorTwo);
+
+// using decorator three - with decorator one and two
+const htmlDecoratorOne = new HtmlInjectProductDecorator(storeDecoratorTwo);
+console.log(htmlDecoratorOne);
+
+//----------------------------------------------
+console.log(productComponentInstance.getDetail());
+console.log(comercialDecoratorOne.getDetail());
+console.log(storeDecoratorOne.getDetail());
+console.log(storeDecoratorTwo.getDetail());
+console.log(htmlDecoratorOne.getDetail());
+
+//----------------------------------------------
+injector.innerHTML = htmlDecoratorOne.getDetail();
