@@ -1,0 +1,9 @@
+.box {
+    display: flex;
+    flex-flow: wrap;
+}
+
+.box > div {
+    border: 1px solid black;
+    flex: 0 0 48%;
+}
