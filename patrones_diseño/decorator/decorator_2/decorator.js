@@ -5,9 +5,7 @@ class ClientComponent {
 
   async getData() {
     const response = await fetch(this.url);
-    const data = await response.json();
-    console.debug(data);
-    return data;
+    return await response.json();
   }
 }
 
@@ -32,3 +30,33 @@ class UpperCaseClientDecorator extends ClientDecorator {
     });
   }
 }
+
+// --- decorator 2 ---
+class HTMLClientDecorator extends ClientDecorator {
+  async getData() {
+    const data = await super.getData();
+    return data.map((element) => {
+      element.title = `<h1>${element.title}</h1>`;
+      element.thumbnailUrl = `<img src="${element.thumbnailUrl}">`;
+      return element;
+    });
+  }
+}
+
+(async () => {
+  const URL = "https://jsonplaceholder.typicode.com/photos";
+  const client = new ClientComponent(URL);
+  const upperClient = new UpperCaseClientDecorator(client);
+
+  const htmlClient = new HTMLClientDecorator(upperClient);
+  const data2 = await htmlClient.getData();
+  divContent1.innerHTML = data2.reduce((acumula, element) => {
+    return acumula + element.title + element.thumbnailUrl;
+  }, "");
+
+  const htmlClient2 = new HTMLClientDecorator(client);
+  const data3 = await htmlClient2.getData();
+  divContent2.innerHTML = data3.reduce((ac,element) => {
+    return ac + element.title + element.thumbnailUrl
+  },"")
+})();
