@@ -671,5 +671,16 @@ console.log(
 );
 //-----------------------------------------------------------------------------------
 //-----------------------------------------------------------------------------------
-// The toSorted() method returns a new array created by sorting the elements of an array in place. The toSorted() method of Array instances is the copying version of the sort() method. It returns a new array with the elements sorted in ascending order.   
+// The toSpliced() method of Array instances is the copying version of the splice() method. It returns a new array with some elements removed and/or replaced at a given index. With this method you can insert, remove and/or replace elements in an array. 
 //-----------------------------------------------------------------------------------
+
+const arrayToSplice = ["January", "March", "April", "May", "August", "September", "October"];
+// Inserting and element
+const resultOneToSpliced = arrayToSplice.toSpliced(1,0,"February");
+console.debug({resultOneToSpliced});
+// Deleted element
+const resultTwoToSpliced = arrayToSplice.toSpliced(1,1);
+console.debug({resultTwoToSpliced});
+// Replacing elements
+const resultThreeToSpliced = arrayToSplice.toSpliced(1,1,"February");
+console.debug({resultThreeToSpliced});
