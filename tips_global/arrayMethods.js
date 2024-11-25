@@ -38,6 +38,8 @@
         - of()
         - findLast()
         - findLastIndex()
+        - toSorted()
+        - toSpliced()
 
 */
 
@@ -653,3 +655,21 @@ console.log({ resultFindAnimal });
 console.log(
   "----------------------------------------------------------------------"
 );
+//-----------------------------------------------------------------------------------
+// The toSorted() method returns a new array created by sorting the elements of an array in place. The toSorted() method of Array instances is the copying version of the sort() method. It returns a new array with the elements sorted in ascending order.   
+//-----------------------------------------------------------------------------------
+
+const arrayOne = [7,2,1,8,77,9,0,-6,4,-3];
+const sortedArrayOne = arrayOne.toSorted();
+const sortedArrayTwo = arrayOne.toSorted((a,b) => a - b);
+console.log({sortedArrayOne});
+console.log({sortedArrayTwo});
+
+//-----------------------------------------------------------------------------------
+console.log(
+  "----------------------------------------------------------------------"
+);
+//-----------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------
+// The toSorted() method returns a new array created by sorting the elements of an array in place. The toSorted() method of Array instances is the copying version of the sort() method. It returns a new array with the elements sorted in ascending order.   
+//-----------------------------------------------------------------------------------
