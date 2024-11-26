@@ -413,3 +413,21 @@ const binarySearch = (arrIn, targetIn) => {
 };
 
 console.debug(binarySearch([1, 3, 5, 7, 9, 11, 13, 15, 17, 19], 15));
+// ----------------------------------------------------------------------------------------
+console.debug(
+  "-----------------------------------------------------------------------------------------"
+);
+// ----------------------------------------------------------------------------------------
+console.debug("Linear Search");
+// ----------------------------------------------------------------------------------------
+// Linear Search: a simple search algorithm that finds the position of a target value within a list.
+// ----------------------------------------------------------------------------------------
+
+const linearSearch = (arrIn, targetIn) => {
+    for (let i = 0; i < arrIn.length; i++) {
+      if (arrIn[i] === targetIn) return i;
+    }
+    return -1;
+};
+
+console.debug(linearSearch([1, 3, 5, 7, 9, 11, 13, 15, 17, 19], 15));
