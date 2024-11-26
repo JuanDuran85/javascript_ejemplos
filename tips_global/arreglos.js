@@ -8,13 +8,13 @@ Ejemplos, trucos y tips para trabajar con arreglos en JavaScript
 // Metodo at: permite leer un elemento en un indice dado
 // ----------------------------------------------------------------------------------------
 const arregloUno = ['a', 'b', 'c', 'd', 'e', 'f']
-console.log(arregloUno.at(0)); // retorna 'a'
-console.log(arregloUno.at(-1)); // retorna 'f'
+console.debug(arregloUno.at(0)); // retorna 'a'
+console.debug(arregloUno.at(-1)); // retorna 'f'
 
 // ----------------------------------------------------------------------------------------
 
 
-console.log('-----------------------------------------------------------------------------------------');
+console.debug('-----------------------------------------------------------------------------------------');
 
 // ----------------------------------------------------------------------------------------
 // Barajar un array: es organizar su elemento de forma aleatoria.
@@ -22,44 +22,44 @@ console.log('-------------------------------------------------------------------
 
 const arrayDosBarajar = (arr) => arr.sort(() => Math.random() - 0.5);
 const arregloTres = ['a', 'b', 'c', 'd', 'e', 'f'];
-console.log(arrayDosBarajar(arregloTres)); // retorna un array aleatorio
+console.debug(arrayDosBarajar(arregloTres)); // retorna un array aleatorio
 
 //-----------------------------------------------------------------------------------------
 
-console.log('-----------------------------------------------------------------------------------------');
+console.debug('-----------------------------------------------------------------------------------------');
 
 // ----------------------------------------------------------------------------------------
 // Obtener elementos unicos de un array mediante Set
 // ----------------------------------------------------------------------------------------
 const obtenerElementosUnicos = (arreglo) => [...new Set(arreglo)];
 const arregloDos = ['a','d','e','b','c','d','c','e','f','a','b','c','d','e','c','f','a','f'];
-console.log(obtenerElementosUnicos(arregloDos)); // retorna un array con los elementos unicos
+console.debug(obtenerElementosUnicos(arregloDos)); // retorna un array con los elementos unicos
 
 
 //-----------------------------------------------------------------------------------------
 
-console.log('-----------------------------------------------------------------------------------------');
+console.debug('-----------------------------------------------------------------------------------------');
 
 // ----------------------------------------------------------------------------------------
 // Cuatro formas distintas de convertir un string a un arreglo
 // ----------------------------------------------------------------------------------------
 const stringUno = "JavaScript";
 // Opcion 1:
-console.log(`String original: ${stringUno}`)
-console.log(stringUno.split(','));
+console.debug(`String original: ${stringUno}`)
+console.debug(stringUno.split(','));
 
 // Opcion 2:
-console.log([...stringUno]);
+console.debug([...stringUno]);
 
 // Opcion 3:
-console.log(Array.from(stringUno));
+console.debug(Array.from(stringUno));
 
 // Opcion 4:
-console.log();
+console.debug();
 
 //-----------------------------------------------------------------------------------------
 
-console.log('-----------------------------------------------------------------------------------------');
+console.debug('-----------------------------------------------------------------------------------------');
 
 // ----------------------------------------------------------------------------------------
 // El metodo includes permite saber si un elemento existe en un arreglo, en convinacion con un condicional if, podemos hacer una comparacion de un elemento en un arreglo y ahorrar condiciones repetidas. Incluso crear funciones que solo se encarguen de buscar un elemento en un arreglo.
@@ -67,7 +67,7 @@ console.log('-------------------------------------------------------------------
 
 const arregloStringElementos = ['Casa', 1, "Compra", "cosas"]
 if (arregloStringElementos.includes('Casa')) {
-  console.log('El elemento existe');
+  console.debug('El elemento existe');
 }
 
 const findAnimal = "Perro";
@@ -78,13 +78,13 @@ const validateAnimal = (animalName) => {
 };
 
 if(validateAnimal(findAnimal)) {
-  console.log(`El animal ${findAnimal} existe`);
+  console.debug(`El animal ${findAnimal} existe`);
 } else {
-  console.log(`El animal ${findAnimal} no existe`);
+  console.debug(`El animal ${findAnimal} no existe`);
 }
 //-----------------------------------------------------------------------------------------
 
-console.log('-----------------------------------------------------------------------------------------');
+console.debug('-----------------------------------------------------------------------------------------');
 
 // ----------------------------------------------------------------------------------------
 // Se puede utilizar el metodo filter para filtrar elementos de un arreglo, pero al pasarle como argumento la palabra Boolean, retornara solamente los elementos del arreglo que sean true o validos.
@@ -92,11 +92,11 @@ console.log('-------------------------------------------------------------------
 
 const arregloSinValidar = [12, null, 0, 34, "JS", false];
 const arregloFiltradoValido = arregloSinValidar.filter(Boolean);
-console.log(arregloFiltradoValido);
+console.debug(arregloFiltradoValido);
 
 //-----------------------------------------------------------------------------------------
 
-console.log('-----------------------------------------------------------------------------------------');
+console.debug('-----------------------------------------------------------------------------------------');
 
 // ----------------------------------------------------------------------------------------
 // Para obtener el valor maximo y minimo de un arreglo se puede utilizar el metodo Math.max y Math.min.
@@ -104,112 +104,112 @@ console.log('-------------------------------------------------------------------
 
 const arregloNumeros = [3,6,8,2,6,1,9];
 
-console.log(Math.max(...arregloNumeros)); // 9
-console.log(Math.min(...arregloNumeros)); // 1
+console.debug(Math.max(...arregloNumeros)); // 9
+console.debug(Math.min(...arregloNumeros)); // 1
 
 
 // ----------------------------------------------------------------------------------------
 
-console.log('-----------------------------------------------------------------------------------------');
+console.debug('-----------------------------------------------------------------------------------------');
 
 // ----------------------------------------------------------------------------------------
 // Se pueden unir o concatenar dos arreglos de dos posibles maneras, una es mediante el metodo concat, y la otra es mediante el metodo spread.
 // ----------------------------------------------------------------------------------------
 
 const arregloNumerosUno = [3,6,8];
-console.log(arregloNumerosUno);
+console.debug(arregloNumerosUno);
 // Opcion 1: concat
 const arregloConcatenadoUno = arregloNumerosUno.concat([6,2]);
-console.log(arregloConcatenadoUno); 
+console.debug(arregloConcatenadoUno); 
 
 // Opcion 2: operador spread
 const arregloConcatenadoDos = [...arregloNumerosUno, 6,2];
-console.log(arregloConcatenadoDos);
+console.debug(arregloConcatenadoDos);
 
 // ----------------------------------------------------------------------------------------
 
-console.log('-----------------------------------------------------------------------------------------');
+console.debug('-----------------------------------------------------------------------------------------');
 
 // ----------------------------------------------------------------------------------------
 // Using delete to erase an element in an array -  When you delete an array element, the array length is not affected. This holds even if you delete the last element of the array. When the delete operator removes an array element, that element is no longer in the array
 // ----------------------------------------------------------------------------------------
 // 1. usando delete
-console.log("Utilizando delete")
+console.debug("Utilizando delete")
 const arrayElementosToDelete = ['a', 'b', 'c', 'd', 'e', 'f'];
-console.log({arrayElementosToDelete});
+console.debug({arrayElementosToDelete});
 delete arrayElementosToDelete[3];
-console.log({arrayElementosToDelete});
+console.debug({arrayElementosToDelete});
 
 // ----------------------------------------------------------------------------------------
 
-console.log('-----------------------------------------------------------------------------------------');
+console.debug('-----------------------------------------------------------------------------------------');
 
 // ----------------------------------------------------------------------------------------
 // String to array in JS
 // ----------------------------------------------------------------------------------------
-console.log("1. Split string to array");
+console.debug("1. Split string to array");
 const stringToArrayWithSplit = "JavaScript-JS";
-console.log(stringToArrayWithSplit.split("-"));
+console.debug(stringToArrayWithSplit.split("-"));
 
-console.log("2. Array From");
+console.debug("2. Array From");
 const stringToArrayWithArrayFrom = "JavaScript-JS";
-console.log(Array.from(stringToArrayWithArrayFrom));
+console.debug(Array.from(stringToArrayWithArrayFrom));
 
-console.log("3. Object assign");
+console.debug("3. Object assign");
 const stringToArrayWithObjectAssign = "JavaScript-JS";
-console.log(Object.assign([], stringToArrayWithObjectAssign));
+console.debug(Object.assign([], stringToArrayWithObjectAssign));
 
-console.log("4. Spread operator");
+console.debug("4. Spread operator");
 const stringToArrayWithSpreadOperator = "JavaScript-JS";
-console.log([...stringToArrayWithSpreadOperator]);
+console.debug([...stringToArrayWithSpreadOperator]);
 
-console.log("5. Manual for loop");
+console.debug("5. Manual for loop");
 const stringToArrayWithManualForLoop = "JavaScript-JS";
 let arrayFinal = [];
 for (let index of stringToArrayWithManualForLoop) {
   arrayFinal.push(index);
 }
-console.log({arrayFinal});
+console.debug({arrayFinal});
 
-console.log("6. JSON Parse");
+console.debug("6. JSON Parse");
 const stringToArrayWithJSONParse = '["J","a","v","a","S","c","r","i","p","t"]';
-console.log(JSON.parse(stringToArrayWithJSONParse));
+console.debug(JSON.parse(stringToArrayWithJSONParse));
 
 // ----------------------------------------------------------------------------------------
 
-console.log('-----------------------------------------------------------------------------------------');
+console.debug('-----------------------------------------------------------------------------------------');
 
 // ----------------------------------------------------------------------------------------
 // JS Arrays Destructuring
 // ----------------------------------------------------------------------------------------
 
-console.log("Assigning array items to variables");
+console.debug("Assigning array items to variables");
 const [a, b, c] = [45,"texto",true];
-console.log({a,b,c});
+console.debug({a,b,c});
 
-console.log("Skipping items");
+console.debug("Skipping items");
 const [,x] = [45,"texto",true];
-console.log({x});
+console.debug({x});
 
-console.log("Assigning the first nvalues, storing the rest together");
+console.debug("Assigning the first nvalues, storing the rest together");
 const [y,z, ...rest] = [45,"texto",true,[1,2,3],{name: "Juan"}];
-console.log({y,z,rest});
+console.debug({y,z,rest});
 
-console.log("Swapping values");
+console.debug("Swapping values");
 let w = true;
 let p = false;
-console.log({w,p});
+console.debug({w,p});
 [w,p] = [p,w];
-console.log({w,p});
+console.debug({w,p});
 
-console.log("Using positional arguments to assign values");
+console.debug("Using positional arguments to assign values");
 const countries = ["Venezuela","Chile","Colombia","Peru","Brasil"];
 const { 0: ven, 3: per } = countries;
-console.log({ven,per});
+console.debug({ven,per});
 
 // ----------------------------------------------------------------------------------------
 
-console.log('-----------------------------------------------------------------------------------------');
+console.debug('-----------------------------------------------------------------------------------------');
 
 // ----------------------------------------------------------------------------------------
 // Using map and flatMap to merge two arrays in one. -  The map method returns a new array with the results of calling a provided function on every element in the calling array. The flatMap method returns a new array with the concatenation of the results of calling a provided function on every element in the calling array.
@@ -217,62 +217,62 @@ console.log('-------------------------------------------------------------------
 const animals = ["🐱​","​🐶​","​🦊​","​🐺​","🦝"];
 const names = ["cat","dog","fox","wolf","raccoon"];
 // 1. map
-console.log("Using map:");
+console.debug("Using map:");
 const mapOnly = animals.map((animal, index) => [animal, names[index]]);
-console.log({mapOnly});
+console.debug({mapOnly});
 
 // 2. flatMap
-console.log("Using flatMap:");
+console.debug("Using flatMap:");
 const flatMapOnly = animals.flatMap((animal, index) => [animal, names[index]]);
-console.log({flatMapOnly});
+console.debug({flatMapOnly});
 // ----------------------------------------------------------------------------------------
 
-console.log('-----------------------------------------------------------------------------------------');
+console.debug('-----------------------------------------------------------------------------------------');
 
 // ----------------------------------------------------------------------------------------
 // You can use the math library to find a get a random item from an array.
 // ----------------------------------------------------------------------------------------
-console.log("Random item from array with Math Library");
+console.debug("Random item from array with Math Library");
 const arrayToFindRandomItem = ["Python","JavaScript","C++","C#","Java","PHP","Ruby"];
-console.log({arrayToFindRandomItem});
+console.debug({arrayToFindRandomItem});
 const randomItemFound = arrayToFindRandomItem[Math.floor(Math.random() * arrayToFindRandomItem.length)];
-console.log({randomItemFound});
+console.debug({randomItemFound});
 // ----------------------------------------------------------------------------------------
 
-console.log('-----------------------------------------------------------------------------------------');
+console.debug('-----------------------------------------------------------------------------------------');
 
 // ----------------------------------------------------------------------------------------
 // You can use filter methods to find items in an array, and length to count the number of items found.
 // ----------------------------------------------------------------------------------------
-console.log("Finding items in array with filter and count");
+console.debug("Finding items in array with filter and count");
 const arregloNumerosTwo = [1,1,3,4,1,5,5,7,1,4,3,5,1,9,4,3,2,1,5];
 const countTotal = (numToFind) => arregloNumerosTwo.filter(item => item === numToFind).length;
-console.log(countTotal(7));
+console.debug(countTotal(7));
 // ----------------------------------------------------------------------------------------
 
-console.log('-----------------------------------------------------------------------------------------');
+console.debug('-----------------------------------------------------------------------------------------');
 
 // ----------------------------------------------------------------------------------------
 // You can use reduce methods to find the sum of a specific imtem in an array and create an object.
 // ----------------------------------------------------------------------------------------
-console.log("Using reduce to sum an array");
+console.debug("Using reduce to sum an array");
 const dataToTransformOne = ["casa", "carro", "perro", "carro", "perro"];
 const dataToTransformTwo = ["casa", "carro", "perro", "carro", "perro"];
 const dataToTransform = [...dataToTransformOne, ...dataToTransformTwo];
-console.log({dataToTransform});
+console.debug({dataToTransform});
 const result = dataToTransform.reduce(
   (map, word) => ({ ...map, [word]: (map[word] || 0) + 1 }),
   {}
 );
-console.log({ result });
+console.debug({ result });
 // ----------------------------------------------------------------------------------------
 
-console.log('-----------------------------------------------------------------------------------------');
+console.debug('-----------------------------------------------------------------------------------------');
 
 // ----------------------------------------------------------------------------------------
 // Using reduce and filter into a function to count the number of times an item appears in an array
 // ----------------------------------------------------------------------------------------
-console.log("Using reduce and filter into a function");
+console.debug("Using reduce and filter into a function");
 
 const countItemFromArray = (arrayIn, element) =>
   arrayIn.reduce(
@@ -286,41 +286,41 @@ const dataFinal = [
   ["casa", "gato"],
   ["carro", "perro", "pc"],
 ];
-console.log({dataFinal});
-console.log(`La cuenta para el elemento: carro es: ${countItemFromArray(dataFinal, "carro")}`);
+console.debug({dataFinal});
+console.debug(`La cuenta para el elemento: carro es: ${countItemFromArray(dataFinal, "carro")}`);
 // ----------------------------------------------------------------------------------------
 
-console.log('-----------------------------------------------------------------------------------------');
+console.debug('-----------------------------------------------------------------------------------------');
 
 // ----------------------------------------------------------------------------------------
 // With the use of reduce method easily calcule the total, minumum and maximum value in the array.
 // ----------------------------------------------------------------------------------------
-console.log("Get total, min and max from array with reduce");
+console.debug("Get total, min and max from array with reduce");
 
 const arrayToCalculeAll = [4,6,3,1,8,9,0,5,-4,2];
-console.log({arrayToCalculeAll});
+console.debug({arrayToCalculeAll});
 
 // Total
 const totalValueFromArray = arrayToCalculeAll.reduce((num1,num2) => num1 + num2);
-console.log({totalValueFromArray});
+console.debug({totalValueFromArray});
 
 // Maximum
 const maximunValueFromArray = arrayToCalculeAll.reduce((num3,num4) => num3 > num4 ? num3 : num4);
-console.log({maximunValueFromArray});
+console.debug({maximunValueFromArray});
 
 // Minimum
 const minumumValueFromArray = arrayToCalculeAll.reduce((num5,num6) => num5 < num6 ? num5 : num6);
-console.log({minumumValueFromArray});
+console.debug({minumumValueFromArray});
 // ----------------------------------------------------------------------------------------
 
-console.log('-----------------------------------------------------------------------------------------');
+console.debug('-----------------------------------------------------------------------------------------');
 
 // ----------------------------------------------------------------------------------------
 // Se puede utilizar funciones, ciclos y condicionales basicos para encontrar la cantidad de veces que se repite un elemento en un array.
 // ----------------------------------------------------------------------------------------
-console.log("Contador de elemento en un array");
+console.debug("Contador de elemento en un array");
 const arryToCountItem = ["casa", "carro", "perro", "carro", "perro"];
-console.log({arryToCountItem});
+console.debug({arryToCountItem});
 const contadorElemento = (unidimensionalArray, elemento) => {
   let contador = 0;
   for (const elementInArray of unidimensionalArray) {
@@ -329,28 +329,28 @@ const contadorElemento = (unidimensionalArray, elemento) => {
   return contador;
 };
 
-console.log(`El elemento: carro se repite: ${contadorElemento(arryToCountItem, "carro")} veces`);
+console.debug(`El elemento: carro se repite: ${contadorElemento(arryToCountItem, "carro")} veces`);
 // ----------------------------------------------------------------------------------------
 
-console.log('-----------------------------------------------------------------------------------------');
+console.debug('-----------------------------------------------------------------------------------------');
 
 // ----------------------------------------------------------------------------------------
 // Se puede utilizar splice mas indexOf para eliminar un elemento en especifico de una arreglo de acuerdo a su ubicacion.
 // ----------------------------------------------------------------------------------------
-console.log("Eliminando un elemeto de un arreglo");
+console.debug("Eliminando un elemeto de un arreglo");
 let numerosLoteria = [4,6,2,7,9,10,1,2,11,3];
-console.log({numerosLoteria});
+console.debug({numerosLoteria});
 const indexNumero = numerosLoteria.indexOf(177);
 numerosLoteria.splice(indexNumero,indexNumero > 0 ? 1 : 0);
-console.log({numerosLoteria});
+console.debug({numerosLoteria});
 // ----------------------------------------------------------------------------------------
 
-console.log('-----------------------------------------------------------------------------------------');
+console.debug('-----------------------------------------------------------------------------------------');
 
 // ----------------------------------------------------------------------------------------
 // Se puede utilizar funciones, ciclos y condicionales basicos para encontrar la cantidad de veces que se repite un elemento en una matriz.
 // ----------------------------------------------------------------------------------------
-console.log("Contador de elemento en una matriz");
+console.debug("Contador de elemento en una matriz");
 const countElementInMatrix = (matrix, element) => {
   let countTotalTwo = 0;
   for (const row of matrix) {
@@ -367,45 +367,45 @@ const dataFinalTwo = [
   ["casa", "gato"],
   ["carro", "perro", "pc"],
 ];
-console.log({dataFinalTwo});
-console.log(`El elemento: carro se repite: ${countElementInMatrix(dataFinalTwo, "carro")} veces`);
+console.debug({dataFinalTwo});
+console.debug(`El elemento: carro se repite: ${countElementInMatrix(dataFinalTwo, "carro")} veces`);
 // ----------------------------------------------------------------------------------------
 
 
-console.log('-----------------------------------------------------------------------------------------');
+console.debug('-----------------------------------------------------------------------------------------');
 
 // ----------------------------------------------------------------------------------------
 // You can filter number from an array using filter by passing Number as an argument, but if you want filter only integer number and not string number, you can use the isInteger method. 
 // ----------------------------------------------------------------------------------------
-console.log("Number.isInteger");
+console.debug("Number.isInteger");
 const arrayNumbers = ['1','2',3,'4',5,'6','texto',false,true,[],{},null,undefined,0,'0'];
-console.log({arrayNumbers});
+console.debug({arrayNumbers});
 const resultNumberFilterOne = arrayNumbers.filter(Number);
-console.log({resultNumberFilterOne});
+console.debug({resultNumberFilterOne});
 const resultNumberFilterTwo = arrayNumbers.filter(Number.isInteger);
-console.log({resultNumberFilterTwo});
+console.debug({resultNumberFilterTwo});
 // ----------------------------------------------------------------------------------------
 
-console.log('-----------------------------------------------------------------------------------------');
+console.debug('-----------------------------------------------------------------------------------------');
 
 // ----------------------------------------------------------------------------------------
 // Se puede mezclar los elementos de un array mediante la utilizacion de spread operator, sort method y la libreria Math con las funciones round y random.
 // ----------------------------------------------------------------------------------------
-console.log("Mezclando elementos de una array");
+console.debug("Mezclando elementos de una array");
 const colors = ["rojo", "azul", "verde", "amarillo", "rosa"];
-console.log({colors});
+console.debug({colors});
 const getArayColorsMixed = (arrayIn = []) => [...arrayIn].sort(()=> Math.round(Math.random())*2-1);
-console.log(getArayColorsMixed(colors));
-console.log(getArayColorsMixed(colors));
-console.log(getArayColorsMixed(colors));
+console.debug(getArayColorsMixed(colors));
+console.debug(getArayColorsMixed(colors));
+console.debug(getArayColorsMixed(colors));
 // ----------------------------------------------------------------------------------------
 
-console.log('-----------------------------------------------------------------------------------------');
+console.debug('-----------------------------------------------------------------------------------------');
 
 // ----------------------------------------------------------------------------------------
 // Se puede utilizar for..of para atravesar arreglos, tambien se puede agregar desestructuracion para capturar una propiedad en particular.
 // ----------------------------------------------------------------------------------------
-console.log("Usando for..of para arreglos");
+console.debug("Usando for..of para arreglos");
 const users = [
   { name: "Juan", age: 20 },
   { name: "Pedro", age: 30 },
@@ -413,20 +413,20 @@ const users = [
 ];
 
 for (const userValues of users) {
-  console.log(userValues);
+  console.debug(userValues);
 }
 
 for (const { name } of users) {
-  console.log(name);
+  console.debug(name);
 }
 // ----------------------------------------------------------------------------------------
 
-console.log('-----------------------------------------------------------------------------------------');
+console.debug('-----------------------------------------------------------------------------------------');
 
 // ----------------------------------------------------------------------------------------
 // 
 // ----------------------------------------------------------------------------------------
-console.log("Chunking an array in n chunks");
+console.debug("Chunking an array in n chunks");
 
 const chunk = (arr, size) =>
   Array.from({ length: Math.ceil(arr.length / size) }, (_, i) =>
@@ -436,11 +436,35 @@ const chunk = (arr, size) =>
 console.debug(chunk([1, 2, 3, 4, 5, 6, 7], 3));
 // ----------------------------------------------------------------------------------------
 
-console.log('-----------------------------------------------------------------------------------------');
+console.debug('-----------------------------------------------------------------------------------------');
 
 // ----------------------------------------------------------------------------------------
-// 
+// Array to Object transformation with reduces or fromEntries methods.
 // ----------------------------------------------------------------------------------------
-console.log("");
+console.debug("Array to Object with reduce");
+// Maximum customization
 
+const peopleData = [
+  ['name', 'John'],
+  ['age', 30],
+  ['city', 'New York'],
+]; // we want to see the result as { name: 'John', age: 30, city: 'New York' }
+
+const arrayToObject = (arrayIn) => {
+  return arrayIn.reduce((total, actual) => {
+    const [prop, value] = actual;
+    return {
+      ...total,
+      [prop]: value
+    };
+  }, {});
+};
+
+console.debug(arrayToObject(peopleData));
+//---------------------------------------------------------------------
+console.debug("Array to Object with fromEntries");
+// Easy way
+
+const resultArrayToObject = Object.fromEntries(peopleData);
+console.debug({resultArrayToObject});
 // ----------------------------------------------------------------------------------------

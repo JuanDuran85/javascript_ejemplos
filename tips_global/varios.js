@@ -284,6 +284,7 @@ console.debug(
 
 // ----------------------------------------------------------------------------------------
 // Utilizando funciones con arreglos y reduce para retornar un objeto (key: value) de una lista de objetos.
+// Function to transform an array with objects into a dictionary
 // ----------------------------------------------------------------------------------------
 console.debug("Funciones y Reduce");
 
@@ -336,3 +337,16 @@ console.debug("\n");
 console.debug(toCsvIn(dataToTransform, ";"));
 console.debug("\n");
 console.debug(toCsvIn(dataToTransform, "|"));
+//-----------------------------------------------------------------------------------------
+
+console.debug(
+  "-----------------------------------------------------------------------------------------"
+);
+
+// ----------------------------------------------------------------------------------------
+// 
+// ----------------------------------------------------------------------------------------
+console.debug("");
+
+
+
