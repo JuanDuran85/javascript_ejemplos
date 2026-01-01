@@ -1,17 +1,19 @@
 import { Manager, Socket } from "socket.io-client";
 
-export const connectToServer: () => Socket = () => {
+export const connectToServer: (token: string) => Socket = (token: string) => {
   const manager: Manager = new Manager(
     "http://localhost:3000/socket.io/socket.io.js",
     {
-      transports: ["websocket"],
+      extraHeaders: {
+        message: "test message",
+        authentication: token,
+      },
     }
   );
 
   const socket: Socket = manager.socket("/");
 
   addListeners(socket);
-
   return socket;
 };
 
@@ -55,7 +57,7 @@ const addListeners: (socket: Socket) => void = (socket: Socket) => {
   socket.on(
     "message-from-server",
     (payload: { fullName: string; message: string }) => {
-      const newMessage = `
+      const newMessage: string = `
         <li>
           <strong>${payload.fullName}</strong>
           <span>${payload.message}</span>
